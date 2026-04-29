@@ -2,191 +2,199 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { Shield, Users, Search, Cctv, ArrowRight, CheckCircle2 } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 
-const fadeIn = {
-  initial: { opacity: 0, y: 20 },
-  animate: { opacity: 1, y: 0 },
-  transition: { duration: 0.5 }
-};
-
-const stagger = {
-  animate: {
-    transition: {
-      staggerChildren: 0.1
-    }
-  }
-};
+// Professional, smooth easing
+const ease = [0.76, 0, 0.24, 1] as const;
 
 export default function Home() {
   return (
     <>
-      {/* Hero Section (Dark) */}
-      <section className="relative bg-slate-950 pt-32 pb-24 md:pt-48 md:pb-32 overflow-hidden flex flex-col justify-center min-h-[90vh]">
-        {/* Subtle background element instead of complex gradient */}
-        <div className="absolute inset-0 bg-[url('/grid.svg')] bg-center [mask-image:linear-gradient(180deg,white,rgba(255,255,255,0))] opacity-10"></div>
+      {/* Hero Section (Dark - bg-slate-950) */}
+      <section className="relative bg-slate-950 pt-40 pb-24 md:pt-56 md:pb-32 min-h-[90vh] flex flex-col justify-between">
+        {/* Subtle grid background for structural feel */}
+        <div className="absolute inset-0 bg-[url('/grid.svg')] bg-center [mask-image:linear-gradient(180deg,white,rgba(255,255,255,0))] opacity-[0.03]"></div>
         
-        <div className="max-w-7xl mx-auto px-6 relative z-10 w-full">
-          <motion.div
-            initial="initial"
-            animate="animate"
-            variants={stagger}
-            className="max-w-3xl"
-          >
-            <motion.h1 
-              variants={fadeIn}
-              className="text-5xl md:text-7xl font-bold tracking-tight text-white mb-6 leading-tight"
-            >
-              Security. Safety. <span className="text-emerald-500">Surveillance.</span>
-            </motion.h1>
-            <motion.p 
-              variants={fadeIn}
-              className="text-lg md:text-xl text-slate-300 mb-10 leading-relaxed max-w-2xl text-balance"
-            >
-              Professional Security and Investigation Services across Tamil Nadu. Commanded by police-background professionals.
-            </motion.p>
-            <motion.div 
-              variants={fadeIn}
-              className="flex flex-col sm:flex-row gap-4"
-            >
-              <Link 
-                href="/contact" 
-                className="bg-emerald-500 hover:bg-emerald-600 text-white font-semibold px-8 py-4 rounded-md transition-colors text-center"
-              >
-                GET SECURITY SERVICES
-              </Link>
-              <Link 
-                href="/contact" 
-                className="bg-transparent border border-white/20 hover:bg-white/5 text-white font-semibold px-8 py-4 rounded-md transition-colors text-center"
-              >
-                CONTACT US
-              </Link>
-            </motion.div>
-          </motion.div>
-        </div>
-      </section>
+        <div className="max-w-7xl mx-auto px-6 w-full relative z-10">
+          <div className="flex flex-col gap-2 md:gap-4 w-full border-l-2 border-emerald-500 pl-6 md:pl-10 mb-16">
+            {["Security.", "Safety.", "Surveillance."].map((text, i) => (
+              <div key={text} className="overflow-hidden">
+                <motion.h1
+                  initial={{ y: "100%" }}
+                  animate={{ y: 0 }}
+                  transition={{ duration: 1, ease, delay: i * 0.1 }}
+                  className="text-6xl md:text-[8vw] font-bold uppercase tracking-tighter leading-[0.85] text-white"
+                >
+                  {text}
+                </motion.h1>
+              </div>
+            ))}
+          </div>
 
-      {/* About Preview (Light) */}
-      <section className="bg-white py-24 md:py-32 text-slate-900 border-t border-slate-200">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            <motion.div
-              initial="initial"
-              whileInView="animate"
-              viewport={{ once: true }}
-              variants={stagger}
-            >
-              <motion.h2 variants={fadeIn} className="text-3xl md:text-4xl font-bold mb-6 text-slate-950">
-                Trusted Protection & Investigation
-              </motion.h2>
-              <motion.p variants={fadeIn} className="text-lg text-slate-600 mb-8 leading-relaxed">
-                Professionally managed security solutions company with strong expertise in crime prevention, surveillance, and private investigation.
+          <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-end pt-12 border-t border-white/10">
+            <div className="md:col-span-4 lg:col-span-3">
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 0.6, duration: 1 }}
+                className="text-xs uppercase tracking-widest text-slate-500 flex flex-col gap-2 font-medium"
+              >
+                <span>Commanded by Police Veterans</span>
+                <span>ISO Certified Operations</span>
+                <span>Based in Tamil Nadu</span>
+              </motion.div>
+            </div>
+            <div className="md:col-span-8 lg:col-span-6 lg:col-start-7">
+              <motion.p
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.8, duration: 1, ease }}
+                className="text-xl md:text-2xl text-slate-300 leading-relaxed font-medium"
+              >
+                Professional security and investigation services. We provide uncompromising, intelligent protection for enterprises demanding the highest standards.
               </motion.p>
-              
-              <motion.div variants={fadeIn} className="flex gap-8 mb-8">
-                <div className="flex flex-col gap-1">
-                  <span className="text-4xl font-bold text-emerald-600">2009</span>
-                  <span className="text-sm font-medium text-slate-500 uppercase tracking-wider">Established</span>
-                </div>
-                <div className="w-px bg-slate-200"></div>
-                <div className="flex flex-col gap-1">
-                  <span className="text-4xl font-bold text-emerald-600">ISO</span>
-                  <span className="text-sm font-medium text-slate-500 uppercase tracking-wider">Certified</span>
-                </div>
-              </motion.div>
-
-              <motion.div variants={fadeIn}>
-                <Link href="/about" className="text-emerald-600 font-semibold hover:text-emerald-700 flex items-center gap-2 group">
-                  Learn more about our leadership 
-                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                </Link>
-              </motion.div>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, x: 20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-              className="bg-slate-50 rounded-2xl p-8 md:p-12 border border-slate-200"
-            >
-              <h3 className="text-xl font-bold mb-6 text-slate-950">Why Choose True Waves?</h3>
-              <ul className="flex flex-col gap-4">
-                {[
-                  "Commanded by retired Police Officers",
-                  "Strict background verification for all personnel",
-                  "24/7 responsive control room operations",
-                  "Comprehensive risk assessment strategies",
-                ].map((item, idx) => (
-                  <li key={idx} className="flex gap-3 items-start">
-                    <CheckCircle2 className="w-6 h-6 text-emerald-500 shrink-0" />
-                    <span className="text-slate-700">{item}</span>
-                  </li>
-                ))}
-              </ul>
-            </motion.div>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Services Preview (Dark) */}
-      <section className="bg-slate-900 py-24 md:py-32 border-t border-slate-800">
+      {/* About Preview (Light - bg-white) */}
+      <section className="bg-white py-32 border-t border-slate-200">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">Our Services</h2>
-            <p className="text-slate-400 max-w-2xl mx-auto">Comprehensive security and investigation solutions tailored for your peace of mind.</p>
+          <div className="grid grid-cols-1 md:grid-cols-12 gap-16">
+            <div className="md:col-span-4 flex flex-col justify-between">
+              <h2 className="text-xs uppercase tracking-widest text-slate-500 font-bold mb-8">The Enterprise</h2>
+              
+              {/* Primary CTA (High Contrast Green) */}
+              <Link href="/about" className="hidden md:inline-flex items-center gap-4 group w-fit">
+                <div className="w-12 h-12 rounded-full bg-emerald-600 flex items-center justify-center text-white group-hover:bg-slate-950 transition-colors duration-500 shadow-sm">
+                  <ArrowRight className="w-5 h-5 -rotate-45 group-hover:rotate-0 transition-transform duration-500" />
+                </div>
+                <span className="text-sm uppercase tracking-widest font-bold text-slate-900">Our Leadership</span>
+              </Link>
+            </div>
+            
+            <div className="md:col-span-8 lg:col-span-8">
+              <div className="overflow-hidden mb-12">
+                <motion.h3 
+                  initial={{ y: "100%" }}
+                  whileInView={{ y: 0 }}
+                  viewport={{ once: true, margin: "-100px" }}
+                  transition={{ duration: 1, ease }}
+                  className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tighter leading-[1.1] text-slate-950"
+                >
+                  Professionally managed security solutions with unparalleled expertise in crime prevention, covert surveillance, and intelligence.
+                </motion.h3>
+              </div>
+
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 pt-12 border-t border-slate-200">
+                <motion.div 
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.8, delay: 0.2 }}
+                >
+                  <div className="text-5xl font-bold tracking-tighter text-emerald-600 mb-2">2009</div>
+                  <div className="text-xs uppercase tracking-widest font-bold text-slate-500">Established</div>
+                </motion.div>
+                <motion.div 
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.8, delay: 0.3 }}
+                >
+                  <div className="text-5xl font-bold tracking-tighter text-slate-950 mb-2">ISO</div>
+                  <div className="text-xs uppercase tracking-widest font-bold text-slate-500">Certified Operations</div>
+                </motion.div>
+              </div>
+
+              <Link href="/about" className="md:hidden mt-12 inline-flex items-center gap-4 group w-fit">
+                <div className="w-12 h-12 rounded-full bg-emerald-600 flex items-center justify-center text-white group-hover:bg-slate-950 transition-colors duration-500 shadow-sm">
+                  <ArrowRight className="w-5 h-5 -rotate-45 group-hover:rotate-0 transition-transform duration-500" />
+                </div>
+                <span className="text-sm uppercase tracking-widest font-bold text-slate-900">Our Leadership</span>
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Services List (Dark - bg-slate-900) */}
+      <section className="bg-slate-900 py-32 border-t border-slate-800 text-white">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="mb-24 flex flex-col md:flex-row justify-between items-start md:items-end gap-8">
+            <h2 className="text-5xl md:text-7xl font-bold tracking-tighter uppercase">Capabilities.</h2>
+            <p className="text-slate-400 max-w-sm text-lg font-medium">Comprehensive, tactical solutions tailored for total operational security.</p>
           </div>
 
-          <motion.div 
-            initial="initial"
-            whileInView="animate"
-            viewport={{ once: true }}
-            variants={stagger}
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"
-          >
+          <div className="flex flex-col border-t border-white/10">
             {[
-              { icon: Shield, title: "Security Services", desc: "Professional armed and unarmed guards, access control, and specialized escort security." },
-              { icon: Users, title: "Manpower Solutions", desc: "Vetted and trained personnel for diverse operational requirements and facility management." },
-              { icon: Search, title: "Investigation Services", desc: "Covert surveillance, background verification, and corporate fraud detection." },
-              { icon: Cctv, title: "Technical Solutions", desc: "Advanced CCTV, biometric access, and integrated alarm systems." }
-            ].map((service, idx) => (
+              { num: "01", title: "Security Services", desc: "Armed & unarmed guarding, access control, and highly-trained escort security." },
+              { num: "02", title: "Manpower Solutions", desc: "Strictly vetted personnel deployed for corporate facility management." },
+              { num: "03", title: "Investigation", desc: "Covert surveillance, fraud detection, and deep background verification." },
+              { num: "04", title: "Technical Systems", desc: "Advanced CCTV, biometric access, and integrated intrusion alarms." }
+            ].map((service, i) => (
               <motion.div 
-                key={idx}
-                variants={fadeIn}
-                className="bg-slate-950 border border-white/5 p-8 rounded-xl hover:border-emerald-500/30 transition-colors flex flex-col items-start"
+                key={service.num}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8, ease, delay: i * 0.1 }}
+                className="group border-b border-white/10 py-12 md:py-16 grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-4 items-center hover:bg-white/[0.02] transition-colors duration-500 px-4 md:px-8 -mx-4 md:-mx-8 rounded-xl"
               >
-                <service.icon className="w-10 h-10 text-emerald-500 mb-6" />
-                <h3 className="text-xl font-semibold mb-3 text-white">{service.title}</h3>
-                <p className="text-slate-400 text-sm leading-relaxed mb-6 flex-grow">{service.desc}</p>
-                <Link href="/services" className="text-emerald-500 text-sm font-medium hover:text-emerald-400 flex items-center gap-1 group mt-auto">
-                  Details <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                </Link>
+                <div className="md:col-span-2 text-emerald-500 font-bold text-xl">{service.num}</div>
+                <div className="md:col-span-6">
+                  <h3 className="text-3xl md:text-4xl font-bold tracking-tighter uppercase text-white">{service.title}</h3>
+                </div>
+                <div className="md:col-span-3 text-slate-400 font-medium">
+                  <p>{service.desc}</p>
+                </div>
+                <div className="md:col-span-1 flex justify-start md:justify-end">
+                  <Link href="/services" aria-label={`Learn more about ${service.title}`}>
+                    <div className="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center group-hover:bg-emerald-600 group-hover:border-emerald-600 group-hover:text-white transition-all duration-500">
+                      <ArrowRight className="w-4 h-4 -rotate-45 group-hover:rotate-0 transition-transform duration-500" />
+                    </div>
+                  </Link>
+                </div>
               </motion.div>
             ))}
-          </motion.div>
+          </div>
+
+          <div className="mt-16 flex justify-center">
+            <Link href="/services" className="inline-block text-xs uppercase tracking-widest font-bold pb-2 border-b-2 border-emerald-600 hover:text-emerald-400 hover:border-emerald-400 transition-colors duration-300">
+              View All Expertise
+            </Link>
+          </div>
         </div>
       </section>
 
-      {/* CTA Section (Darker Highlight) */}
-      <section className="bg-slate-950 py-24 md:py-32">
-        <div className="max-w-7xl mx-auto px-6">
-          <motion.div 
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="bg-slate-900/50 border border-white/10 rounded-2xl p-10 md:p-16 text-center max-w-4xl mx-auto"
-          >
-            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">Secure Your Enterprise Today</h2>
-            <p className="text-slate-300 mb-10 text-lg max-w-2xl mx-auto">
-              Partner with True Waves for uncompromising security and professional investigation services. Let our experts assess your vulnerabilities.
-            </p>
-            <Link 
-              href="/contact" 
-              className="inline-block bg-emerald-500 hover:bg-emerald-600 text-white font-semibold px-8 py-4 rounded-md transition-colors"
+      {/* CTA Section (Highlight - bg-slate-900/50 over bg-slate-950) */}
+      <section className="bg-slate-950 py-32 md:py-48 relative overflow-hidden">
+        <div className="absolute inset-0 bg-slate-900/30"></div>
+        <div className="max-w-7xl mx-auto px-6 relative z-10 flex flex-col items-center text-center">
+          <h2 className="text-xs uppercase tracking-widest text-emerald-500 font-bold mb-8">Secure Your Infrastructure</h2>
+          
+          <div className="overflow-hidden mb-12">
+            <motion.h3 
+              initial={{ y: "100%" }}
+              whileInView={{ y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 1, ease }}
+              className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tighter uppercase leading-[0.9] text-white"
             >
-              REQUEST CONSULTATION
-            </Link>
-          </motion.div>
+              Initiate <br /> Deployment.
+            </motion.h3>
+          </div>
+
+          <p className="text-xl text-slate-400 mb-12 max-w-2xl font-medium">
+            Partner with True Waves for uncompromising protection and professional investigation services. Let our experts assess your vulnerabilities.
+          </p>
+
+          <Link href="/contact" className="group relative inline-flex items-center justify-center px-10 py-5 font-bold text-white transition-all duration-300 bg-emerald-600 rounded-md hover:bg-emerald-700 focus:outline-none focus:ring-2 focus:ring-emerald-600 focus:ring-offset-2 focus:ring-offset-slate-950 shadow-lg">
+            <span className="flex items-center gap-3 text-sm uppercase tracking-widest">
+              Request Consultation <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+            </span>
+          </Link>
         </div>
       </section>
     </>

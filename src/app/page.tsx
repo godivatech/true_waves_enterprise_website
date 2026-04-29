@@ -130,6 +130,42 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Client Verticals (Industry Expertise) */}
+      <section className="bg-zinc-50 py-32 border-t border-zinc-200">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="mb-20 text-center flex flex-col items-center">
+            <h2 className="text-xs uppercase tracking-widest text-emerald-600 font-bold mb-4">Industry Expertise</h2>
+            <h3 className="text-4xl md:text-5xl font-bold tracking-tighter text-zinc-950 max-w-2xl">
+              Securing critical infrastructure across specialized verticals.
+            </h3>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {[
+              { title: "Banking & Finance", desc: "High-security protocols for financial institutions and transit." },
+              { title: "Industrial & Manufacturing", desc: "Scaleable protection for expansive industrial units and assets." },
+              { title: "Healthcare & Hospitals", desc: "Discreet and professional security for sensitive medical environments." },
+              { title: "Educational Institutions", desc: "Safe learning environments with controlled access and monitoring." },
+              { title: "High-End Residential", desc: "Premium, unobtrusive protection for luxury residential complexes." },
+              { title: "Corporate IT Parks", desc: "Comprehensive tech-enabled security for modern corporate hubs." }
+            ].map((vertical, i) => (
+              <motion.div
+                key={vertical.title}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8, ease, delay: i * 0.1 }}
+                className="bg-white p-8 border border-zinc-200 hover:border-emerald-500 transition-colors duration-300 rounded-xl group"
+              >
+                <div className="w-2 h-2 bg-zinc-300 group-hover:bg-emerald-500 rounded-full mb-6 transition-colors duration-300"></div>
+                <h4 className="text-xl font-bold text-zinc-950 mb-3 tracking-tight">{vertical.title}</h4>
+                <p className="text-zinc-600 font-medium text-sm leading-relaxed">{vertical.desc}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Services List (Dark - bg-zinc-900) */}
       <section className="bg-zinc-900 py-32 border-t border-zinc-800 text-white">
         <div className="max-w-7xl mx-auto px-6">

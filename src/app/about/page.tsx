@@ -102,6 +102,65 @@ export default function About() {
         </div>
       </section>
 
+      {/* The Discipline Standard (Training & Vetting) */}
+      <section className="bg-zinc-100 py-32 border-t border-zinc-200">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="mb-20 text-center flex flex-col items-center">
+            <h2 className="text-xs uppercase tracking-widest text-emerald-600 font-bold mb-4">Selection & Training</h2>
+            <h3 className="text-4xl md:text-5xl font-bold tracking-tighter text-zinc-950 max-w-2xl">
+              The Discipline Standard
+            </h3>
+            <p className="text-zinc-600 mt-6 max-w-3xl text-lg font-medium leading-relaxed">
+              Because our leadership comes from a police background, we enforce an unparalleled standard of vetting and continuous training. We don't just hire guards; we deploy professionals.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <motion.div 
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, ease, delay: 0.1 }}
+              className="bg-white p-10 rounded-xl border border-zinc-200 shadow-sm"
+            >
+              <div className="text-emerald-600 font-bold text-xl mb-4">01</div>
+              <h4 className="font-bold text-2xl text-zinc-950 mb-4 tracking-tight">Rigorous Vetting</h4>
+              <p className="text-zinc-600 font-medium leading-relaxed">
+                Every candidate undergoes strict police verification, background checks, and psychological evaluation before onboarding.
+              </p>
+            </motion.div>
+
+            <motion.div 
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, ease, delay: 0.2 }}
+              className="bg-white p-10 rounded-xl border border-zinc-200 shadow-sm"
+            >
+              <div className="text-emerald-600 font-bold text-xl mb-4">02</div>
+              <h4 className="font-bold text-2xl text-zinc-950 mb-4 tracking-tight">Physical Standards</h4>
+              <p className="text-zinc-600 font-medium leading-relaxed">
+                Mandatory physical fitness benchmarks matched to law enforcement entry requirements, ensuring capability under pressure.
+              </p>
+            </motion.div>
+
+            <motion.div 
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, ease, delay: 0.3 }}
+              className="bg-white p-10 rounded-xl border border-zinc-200 shadow-sm"
+            >
+              <div className="text-emerald-600 font-bold text-xl mb-4">03</div>
+              <h4 className="font-bold text-2xl text-zinc-950 mb-4 tracking-tight">Continuous Training</h4>
+              <p className="text-zinc-600 font-medium leading-relaxed">
+                Monthly refresher courses on emergency response, fire safety protocols, first aid, and customer interaction.
+              </p>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
       {/* Leadership Section (Dark) */}
       <section className="bg-zinc-950 py-32 text-white">
         <div className="max-w-7xl mx-auto px-6">

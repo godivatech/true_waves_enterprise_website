@@ -7,8 +7,8 @@
 
 body {
   font-family: var(--font-inter), sans-serif;
-  background-color: var(--color-slate-950);
-  color: var(--color-slate-50);
+  background-color: var(--color-zinc-950);
+  color: var(--color-zinc-50);
 }
 
 @layer utilities {

@@ -10,10 +10,21 @@ const ease = [0.76, 0, 0.24, 1] as const;
 export default function Home() {
   return (
     <>
-      {/* Hero Section (Dark - bg-slate-950) */}
-      <section className="relative bg-slate-950 pt-40 pb-24 md:pt-56 md:pb-32 min-h-[90vh] flex flex-col justify-between">
-        {/* Subtle grid background for structural feel */}
-        <div className="absolute inset-0 bg-[url('/grid.svg')] bg-center [mask-image:linear-gradient(180deg,white,rgba(255,255,255,0))] opacity-[0.03]"></div>
+      {/* Hero Section (Dark - bg-zinc-950) */}
+      <section className="relative bg-zinc-950 pt-40 pb-24 md:pt-56 md:pb-32 min-h-[90vh] flex flex-col justify-between overflow-hidden">
+        {/* Background Image with reduced visibility */}
+        <div className="absolute inset-0 z-0">
+          <div 
+            className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-40"
+            style={{ backgroundImage: "url('/hero-bg.png')" }}
+          />
+          {/* Gradients to blend and ensure text readability - Neutral Tones */}
+          <div className="absolute inset-0 bg-gradient-to-b from-zinc-950/90 via-zinc-950/40 to-zinc-950"></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-zinc-950 via-zinc-950/20 to-transparent"></div>
+          
+          {/* Grid overlay for texture */}
+          <div className="absolute inset-0 bg-[url('/grid.svg')] bg-center [mask-image:linear-gradient(180deg,white,rgba(255,255,255,0))] opacity-[0.05]"></div>
+        </div>
         
         <div className="max-w-7xl mx-auto px-6 w-full relative z-10">
           <div className="flex flex-col gap-2 md:gap-4 w-full border-l-2 border-emerald-500 pl-6 md:pl-10 mb-16">
@@ -37,7 +48,7 @@ export default function Home() {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.6, duration: 1 }}
-                className="text-xs uppercase tracking-widest text-slate-500 flex flex-col gap-2 font-medium"
+                className="text-xs uppercase tracking-widest text-zinc-500 flex flex-col gap-2 font-medium"
               >
                 <span>Commanded by Police Veterans</span>
                 <span>ISO Certified Operations</span>
@@ -49,7 +60,7 @@ export default function Home() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.8, duration: 1, ease }}
-                className="text-xl md:text-2xl text-slate-300 leading-relaxed font-medium"
+                className="text-xl md:text-2xl text-zinc-300 leading-relaxed font-medium"
               >
                 Professional security and investigation services. We provide uncompromising, intelligent protection for enterprises demanding the highest standards.
               </motion.p>

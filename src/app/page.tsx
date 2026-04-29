@@ -14,21 +14,21 @@ export default function Home() {
       <section className="relative bg-zinc-950 pt-40 pb-24 md:pt-56 md:pb-32 min-h-[90vh] flex flex-col justify-between overflow-hidden">
         {/* Background Image with reduced visibility */}
         <div className="absolute inset-0 z-0">
-          <div 
+          <div
             className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-40"
             style={{ backgroundImage: "url('/hero-bg.png')" }}
           />
           {/* Gradients to blend and ensure text readability - Neutral Tones */}
           <div className="absolute inset-0 bg-gradient-to-b from-zinc-950/90 via-zinc-950/40 to-zinc-950"></div>
           <div className="absolute inset-0 bg-gradient-to-r from-zinc-950 via-zinc-950/20 to-transparent"></div>
-          
+
           {/* Grid overlay for texture */}
           <div className="absolute inset-0 bg-[url('/grid.svg')] bg-center [mask-image:linear-gradient(180deg,white,rgba(255,255,255,0))] opacity-[0.05]"></div>
         </div>
-        
+
         <div className="max-w-7xl mx-auto px-6 w-full relative z-10">
           <div className="flex flex-col gap-2 md:gap-4 w-full border-l-2 border-emerald-500 pl-6 md:pl-10 mb-16">
-            {["Security.", "Safety.", "Surveillance."].map((text, i) => (
+            {["Security", "Safety", "Surveillance"].map((text, i) => (
               <div key={text} className="overflow-hidden">
                 <motion.h1
                   initial={{ y: "100%" }}
@@ -75,7 +75,7 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-12 gap-16">
             <div className="md:col-span-4 flex flex-col justify-between">
               <h2 className="text-xs uppercase tracking-widest text-slate-500 font-bold mb-8">The Enterprise</h2>
-              
+
               {/* Primary CTA (High Contrast Green) */}
               <Link href="/about" className="hidden md:inline-flex items-center gap-4 group w-fit">
                 <div className="w-12 h-12 rounded-full bg-emerald-600 flex items-center justify-center text-white group-hover:bg-slate-950 transition-colors duration-500 shadow-sm">
@@ -84,10 +84,10 @@ export default function Home() {
                 <span className="text-sm uppercase tracking-widest font-bold text-slate-900">Our Leadership</span>
               </Link>
             </div>
-            
+
             <div className="md:col-span-8 lg:col-span-8">
               <div className="overflow-hidden mb-12">
-                <motion.h3 
+                <motion.h3
                   initial={{ y: "100%" }}
                   whileInView={{ y: 0 }}
                   viewport={{ once: true, margin: "-100px" }}
@@ -99,7 +99,7 @@ export default function Home() {
               </div>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 pt-12 border-t border-slate-200">
-                <motion.div 
+                <motion.div
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
@@ -108,7 +108,7 @@ export default function Home() {
                   <div className="text-5xl font-bold tracking-tighter text-emerald-600 mb-2">2009</div>
                   <div className="text-xs uppercase tracking-widest font-bold text-slate-500">Established</div>
                 </motion.div>
-                <motion.div 
+                <motion.div
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
@@ -134,7 +134,7 @@ export default function Home() {
       <section className="bg-slate-900 py-32 border-t border-slate-800 text-white">
         <div className="max-w-7xl mx-auto px-6">
           <div className="mb-24 flex flex-col md:flex-row justify-between items-start md:items-end gap-8">
-            <h2 className="text-5xl md:text-7xl font-bold tracking-tighter uppercase">Capabilities.</h2>
+            <h2 className="text-5xl md:text-7xl font-bold tracking-tighter uppercase">Capabilities</h2>
             <p className="text-slate-400 max-w-sm text-lg font-medium">Comprehensive, tactical solutions tailored for total operational security.</p>
           </div>
 
@@ -145,7 +145,7 @@ export default function Home() {
               { num: "03", title: "Investigation", desc: "Covert surveillance, fraud detection, and deep background verification." },
               { num: "04", title: "Technical Systems", desc: "Advanced CCTV, biometric access, and integrated intrusion alarms." }
             ].map((service, i) => (
-              <motion.div 
+              <motion.div
                 key={service.num}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -184,16 +184,16 @@ export default function Home() {
         <div className="absolute inset-0 bg-slate-900/30"></div>
         <div className="max-w-7xl mx-auto px-6 relative z-10 flex flex-col items-center text-center">
           <h2 className="text-xs uppercase tracking-widest text-emerald-500 font-bold mb-8">Secure Your Infrastructure</h2>
-          
+
           <div className="overflow-hidden mb-12">
-            <motion.h3 
+            <motion.h3
               initial={{ y: "100%" }}
               whileInView={{ y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 1, ease }}
               className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tighter uppercase leading-[0.9] text-white"
             >
-              Initiate <br /> Deployment.
+              Initiate <br /> Deployment
             </motion.h3>
           </div>
 

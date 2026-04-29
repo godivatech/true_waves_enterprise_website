@@ -14,16 +14,16 @@ export default function About() {
         <div className="max-w-7xl mx-auto px-6 relative z-10">
           <div className="max-w-3xl border-l-2 border-emerald-500 pl-6 md:pl-10">
             <div className="overflow-hidden mb-6">
-              <motion.h1 
+              <motion.h1
                 initial={{ y: "100%" }}
                 animate={{ y: 0 }}
                 transition={{ duration: 1, ease }}
                 className="text-5xl md:text-7xl font-bold text-white tracking-tighter uppercase leading-[0.9]"
               >
-                Our Journey.
+                Our Journey
               </motion.h1>
             </div>
-            <motion.p 
+            <motion.p
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.5, duration: 1, ease }}
@@ -42,7 +42,7 @@ export default function About() {
             <div className="lg:col-span-6">
               <h2 className="text-xs uppercase tracking-widest text-emerald-600 font-bold mb-6">The Evolution</h2>
               <h3 className="text-4xl md:text-5xl font-bold mb-10 text-slate-950 tracking-tighter leading-[1.1]">
-                A legacy built on uncompromising discipline.
+                A legacy built on uncompromising discipline
               </h3>
               <div className="space-y-6 text-slate-600 text-lg leading-relaxed font-medium">
                 <p>
@@ -61,8 +61,8 @@ export default function About() {
                 { icon: Users, title: "Vetted Staff", desc: "Strict background checks" },
                 { icon: CheckCircle2, title: "Proven Track", desc: "Over a decade of excellence" }
               ].map((item, idx) => (
-                <motion.div 
-                  key={idx} 
+                <motion.div
+                  key={idx}
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
@@ -87,10 +87,10 @@ export default function About() {
           <div className="mb-24 flex flex-col md:flex-row justify-between items-start md:items-end gap-8">
             <div>
               <h2 className="text-xs uppercase tracking-widest text-emerald-500 font-bold mb-4">Command Center</h2>
-              <h3 className="text-5xl md:text-6xl font-bold tracking-tighter uppercase leading-[1.1]">Leadership.</h3>
+              <h3 className="text-5xl md:text-6xl font-bold tracking-tighter uppercase leading-[1.1]">Leadership</h3>
             </div>
             <p className="text-slate-400 max-w-sm text-lg font-medium">
-              Directed by seasoned professionals from intelligence and law enforcement.
+              Directed by seasoned professionals from intelligence and law enforcement
             </p>
           </div>
 
@@ -101,7 +101,7 @@ export default function About() {
               { name: "Er. S. Sanjay", role: "Director", desc: "Marketing & Infrastructure" },
               { name: "S. Kumaravel", role: "Director", desc: "Operations & Management" }
             ].map((leader, idx) => (
-              <motion.div 
+              <motion.div
                 key={idx}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}

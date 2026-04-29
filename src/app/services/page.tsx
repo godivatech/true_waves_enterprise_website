@@ -15,16 +15,16 @@ export default function Services() {
         <div className="max-w-7xl mx-auto px-6 relative z-10">
           <div className="max-w-3xl border-l-2 border-emerald-500 pl-6 md:pl-10">
             <div className="overflow-hidden mb-6">
-              <motion.h1 
+              <motion.h1
                 initial={{ y: "100%" }}
                 animate={{ y: 0 }}
                 transition={{ duration: 1, ease }}
                 className="text-5xl md:text-7xl font-bold text-white tracking-tighter uppercase leading-[0.9]"
               >
-                Expertise.
+                Expertise
               </motion.h1>
             </div>
-            <motion.p 
+            <motion.p
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.5, duration: 1, ease }}
@@ -168,9 +168,9 @@ export default function Services() {
         <div className="absolute inset-0 bg-slate-900/30"></div>
         <div className="max-w-4xl mx-auto px-6 relative z-10">
           <h2 className="text-xs uppercase tracking-widest text-emerald-500 font-bold mb-8">Ready to secure your enterprise?</h2>
-          
+
           <div className="overflow-hidden mb-12">
-            <motion.h3 
+            <motion.h3
               initial={{ y: "100%" }}
               whileInView={{ y: 0 }}
               viewport={{ once: true }}

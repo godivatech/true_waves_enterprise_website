@@ -13,16 +13,16 @@ export default function Contact() {
         <div className="max-w-7xl mx-auto px-6 relative z-10">
           <div className="max-w-3xl border-l-2 border-emerald-500 pl-6 md:pl-10">
             <div className="overflow-hidden mb-6">
-              <motion.h1 
+              <motion.h1
                 initial={{ y: "100%" }}
                 animate={{ y: 0 }}
                 transition={{ duration: 1, ease }}
                 className="text-5xl md:text-7xl font-bold text-white tracking-tighter uppercase leading-[0.9]"
               >
-                Connect.
+                Connect
               </motion.h1>
             </div>
-            <motion.p 
+            <motion.p
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.5, duration: 1, ease }}
@@ -36,10 +36,10 @@ export default function Contact() {
 
       <section className="bg-white">
         <div className="grid grid-cols-1 lg:grid-cols-12 min-h-screen">
-          
+
           {/* Left Form (Light) */}
           <div className="lg:col-span-7 py-32 px-6 lg:px-16 xl:px-24 flex justify-center lg:justify-end">
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.6, duration: 1, ease }}
@@ -47,17 +47,17 @@ export default function Contact() {
             >
               <h2 className="text-4xl font-bold text-slate-950 mb-4 tracking-tight">Initiate Inquiry</h2>
               <p className="text-slate-600 mb-12 font-medium text-lg">Fill out the form below. Our operations team will respond promptly.</p>
-              
+
               <form className="space-y-8" onSubmit={(e) => e.preventDefault()}>
                 <div className="relative">
-                  <input 
-                    type="text" 
-                    id="name" 
+                  <input
+                    type="text"
+                    id="name"
                     placeholder=" "
                     className="peer w-full bg-transparent border-b-2 border-slate-200 py-4 text-xl text-slate-900 focus:outline-none focus:border-emerald-600 transition-colors placeholder-transparent font-medium"
                   />
-                  <label 
-                    htmlFor="name" 
+                  <label
+                    htmlFor="name"
                     className="absolute left-0 top-4 text-slate-500 text-lg transition-all peer-focus:-top-4 peer-focus:text-xs peer-focus:uppercase peer-focus:tracking-widest peer-focus:text-emerald-600 peer-focus:font-bold peer-not-placeholder-shown:-top-4 peer-not-placeholder-shown:text-xs peer-not-placeholder-shown:uppercase peer-not-placeholder-shown:tracking-widest peer-not-placeholder-shown:font-bold"
                   >
                     Full Name
@@ -65,14 +65,14 @@ export default function Contact() {
                 </div>
 
                 <div className="relative">
-                  <input 
-                    type="tel" 
-                    id="phone" 
+                  <input
+                    type="tel"
+                    id="phone"
                     placeholder=" "
                     className="peer w-full bg-transparent border-b-2 border-slate-200 py-4 text-xl text-slate-900 focus:outline-none focus:border-emerald-600 transition-colors placeholder-transparent font-medium"
                   />
-                  <label 
-                    htmlFor="phone" 
+                  <label
+                    htmlFor="phone"
                     className="absolute left-0 top-4 text-slate-500 text-lg transition-all peer-focus:-top-4 peer-focus:text-xs peer-focus:uppercase peer-focus:tracking-widest peer-focus:text-emerald-600 peer-focus:font-bold peer-not-placeholder-shown:-top-4 peer-not-placeholder-shown:text-xs peer-not-placeholder-shown:uppercase peer-not-placeholder-shown:tracking-widest peer-not-placeholder-shown:font-bold"
                   >
                     Phone Number
@@ -80,21 +80,21 @@ export default function Contact() {
                 </div>
 
                 <div className="relative">
-                  <textarea 
-                    id="message" 
+                  <textarea
+                    id="message"
                     rows={4}
                     placeholder=" "
                     className="peer w-full bg-transparent border-b-2 border-slate-200 py-4 text-xl text-slate-900 focus:outline-none focus:border-emerald-600 transition-colors resize-none placeholder-transparent font-medium"
                   ></textarea>
-                  <label 
-                    htmlFor="message" 
+                  <label
+                    htmlFor="message"
                     className="absolute left-0 top-4 text-slate-500 text-lg transition-all peer-focus:-top-4 peer-focus:text-xs peer-focus:uppercase peer-focus:tracking-widest peer-focus:text-emerald-600 peer-focus:font-bold peer-not-placeholder-shown:-top-4 peer-not-placeholder-shown:text-xs peer-not-placeholder-shown:uppercase peer-not-placeholder-shown:tracking-widest peer-not-placeholder-shown:font-bold"
                   >
                     Requirements / Message
                   </label>
                 </div>
 
-                <button 
+                <button
                   type="submit"
                   className="group relative inline-flex items-center justify-center w-full px-8 py-5 font-bold text-white transition-all duration-300 bg-emerald-600 rounded-md hover:bg-emerald-700 focus:outline-none focus:ring-2 focus:ring-emerald-600 focus:ring-offset-2 shadow-lg mt-8"
                 >
@@ -108,14 +108,14 @@ export default function Contact() {
 
           {/* Right Info (Dark) */}
           <div className="lg:col-span-5 bg-slate-900 py-32 px-6 lg:px-16 xl:px-24 flex justify-center lg:justify-start border-t lg:border-t-0 lg:border-l border-slate-800">
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, x: 20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 0.8, duration: 1, ease }}
               className="w-full max-w-xl text-white"
             >
               <h2 className="text-xs uppercase tracking-widest text-emerald-500 font-bold mb-16">Command Locations</h2>
-              
+
               <div className="space-y-16">
                 {/* Madurai Office */}
                 <div>
@@ -126,7 +126,7 @@ export default function Contact() {
                     <h3 className="text-2xl font-bold tracking-tight">Madurai HQ</h3>
                   </div>
                   <p className="text-slate-400 mb-6 leading-relaxed font-medium pl-14">
-                    No.5, North St, Singarayar Colony,<br/>
+                    No.5, North St, Singarayar Colony,<br />
                     Narimedu, Madurai – 625002
                   </p>
                   <div className="flex items-center gap-3 text-slate-300 pl-14 font-medium">
@@ -144,7 +144,7 @@ export default function Contact() {
                     <h3 className="text-2xl font-bold tracking-tight">Chennai Branch</h3>
                   </div>
                   <p className="text-slate-400 mb-6 leading-relaxed font-medium pl-14">
-                    K.R.J Building, 4th Floor,<br/>
+                    K.R.J Building, 4th Floor,<br />
                     7, Welder St, Mount Road, Chennai
                   </p>
                   <div className="flex items-center gap-3 text-slate-300 pl-14 font-medium">

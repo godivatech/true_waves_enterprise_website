@@ -8,7 +8,7 @@ const ease = [0.76, 0, 0.24, 1] as const;
 export default function Contact() {
   return (
     <>
-      <section className="bg-slate-950 pt-40 pb-24 md:pt-56 md:pb-32 border-b border-white/10 relative">
+      <section className="bg-zinc-950 pt-40 pb-24 md:pt-56 md:pb-32 border-b border-white/10 relative">
         <div className="absolute inset-0 bg-[url('/grid.svg')] bg-center [mask-image:linear-gradient(180deg,white,rgba(255,255,255,0))] opacity-[0.03]"></div>
         <div className="max-w-7xl mx-auto px-6 relative z-10">
           <div className="max-w-3xl border-l-2 border-emerald-500 pl-6 md:pl-10">
@@ -26,7 +26,7 @@ export default function Contact() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.5, duration: 1, ease }}
-              className="text-xl md:text-2xl text-slate-300 leading-relaxed font-medium"
+              className="text-xl md:text-2xl text-zinc-300 leading-relaxed font-medium"
             >
               Reach out to our security experts for consultations, assessments, or immediate service inquiries.
             </motion.p>
@@ -45,8 +45,8 @@ export default function Contact() {
               transition={{ delay: 0.6, duration: 1, ease }}
               className="w-full max-w-xl"
             >
-              <h2 className="text-4xl font-bold text-slate-950 mb-4 tracking-tight">Initiate Inquiry</h2>
-              <p className="text-slate-600 mb-12 font-medium text-lg">Fill out the form below. Our operations team will respond promptly.</p>
+              <h2 className="text-4xl font-bold text-zinc-950 mb-4 tracking-tight">Initiate Inquiry</h2>
+              <p className="text-zinc-600 mb-12 font-medium text-lg">Fill out the form below. Our operations team will respond promptly.</p>
 
               <form className="space-y-8" onSubmit={(e) => e.preventDefault()}>
                 <div className="relative">
@@ -54,11 +54,11 @@ export default function Contact() {
                     type="text"
                     id="name"
                     placeholder=" "
-                    className="peer w-full bg-transparent border-b-2 border-slate-200 py-4 text-xl text-slate-900 focus:outline-none focus:border-emerald-600 transition-colors placeholder-transparent font-medium"
+                    className="peer w-full bg-transparent border-b-2 border-zinc-200 py-4 text-xl text-zinc-900 focus:outline-none focus:border-emerald-600 transition-colors placeholder-transparent font-medium"
                   />
                   <label
                     htmlFor="name"
-                    className="absolute left-0 top-4 text-slate-500 text-lg transition-all peer-focus:-top-4 peer-focus:text-xs peer-focus:uppercase peer-focus:tracking-widest peer-focus:text-emerald-600 peer-focus:font-bold peer-not-placeholder-shown:-top-4 peer-not-placeholder-shown:text-xs peer-not-placeholder-shown:uppercase peer-not-placeholder-shown:tracking-widest peer-not-placeholder-shown:font-bold"
+                    className="absolute left-0 top-4 text-zinc-500 text-lg transition-all peer-focus:-top-4 peer-focus:text-xs peer-focus:uppercase peer-focus:tracking-widest peer-focus:text-emerald-600 peer-focus:font-bold peer-not-placeholder-shown:-top-4 peer-not-placeholder-shown:text-xs peer-not-placeholder-shown:uppercase peer-not-placeholder-shown:tracking-widest peer-not-placeholder-shown:font-bold"
                   >
                     Full Name
                   </label>
@@ -69,11 +69,11 @@ export default function Contact() {
                     type="tel"
                     id="phone"
                     placeholder=" "
-                    className="peer w-full bg-transparent border-b-2 border-slate-200 py-4 text-xl text-slate-900 focus:outline-none focus:border-emerald-600 transition-colors placeholder-transparent font-medium"
+                    className="peer w-full bg-transparent border-b-2 border-zinc-200 py-4 text-xl text-zinc-900 focus:outline-none focus:border-emerald-600 transition-colors placeholder-transparent font-medium"
                   />
                   <label
                     htmlFor="phone"
-                    className="absolute left-0 top-4 text-slate-500 text-lg transition-all peer-focus:-top-4 peer-focus:text-xs peer-focus:uppercase peer-focus:tracking-widest peer-focus:text-emerald-600 peer-focus:font-bold peer-not-placeholder-shown:-top-4 peer-not-placeholder-shown:text-xs peer-not-placeholder-shown:uppercase peer-not-placeholder-shown:tracking-widest peer-not-placeholder-shown:font-bold"
+                    className="absolute left-0 top-4 text-zinc-500 text-lg transition-all peer-focus:-top-4 peer-focus:text-xs peer-focus:uppercase peer-focus:tracking-widest peer-focus:text-emerald-600 peer-focus:font-bold peer-not-placeholder-shown:-top-4 peer-not-placeholder-shown:text-xs peer-not-placeholder-shown:uppercase peer-not-placeholder-shown:tracking-widest peer-not-placeholder-shown:font-bold"
                   >
                     Phone Number
                   </label>
@@ -84,11 +84,11 @@ export default function Contact() {
                     id="message"
                     rows={4}
                     placeholder=" "
-                    className="peer w-full bg-transparent border-b-2 border-slate-200 py-4 text-xl text-slate-900 focus:outline-none focus:border-emerald-600 transition-colors resize-none placeholder-transparent font-medium"
+                    className="peer w-full bg-transparent border-b-2 border-zinc-200 py-4 text-xl text-zinc-900 focus:outline-none focus:border-emerald-600 transition-colors resize-none placeholder-transparent font-medium"
                   ></textarea>
                   <label
                     htmlFor="message"
-                    className="absolute left-0 top-4 text-slate-500 text-lg transition-all peer-focus:-top-4 peer-focus:text-xs peer-focus:uppercase peer-focus:tracking-widest peer-focus:text-emerald-600 peer-focus:font-bold peer-not-placeholder-shown:-top-4 peer-not-placeholder-shown:text-xs peer-not-placeholder-shown:uppercase peer-not-placeholder-shown:tracking-widest peer-not-placeholder-shown:font-bold"
+                    className="absolute left-0 top-4 text-zinc-500 text-lg transition-all peer-focus:-top-4 peer-focus:text-xs peer-focus:uppercase peer-focus:tracking-widest peer-focus:text-emerald-600 peer-focus:font-bold peer-not-placeholder-shown:-top-4 peer-not-placeholder-shown:text-xs peer-not-placeholder-shown:uppercase peer-not-placeholder-shown:tracking-widest peer-not-placeholder-shown:font-bold"
                   >
                     Requirements / Message
                   </label>
@@ -107,7 +107,7 @@ export default function Contact() {
           </div>
 
           {/* Right Info (Dark) */}
-          <div className="lg:col-span-5 bg-slate-900 py-32 px-6 lg:px-16 xl:px-24 flex justify-center lg:justify-start border-t lg:border-t-0 lg:border-l border-slate-800">
+          <div className="lg:col-span-5 bg-zinc-900 py-32 px-6 lg:px-16 xl:px-24 flex justify-center lg:justify-start border-t lg:border-t-0 lg:border-l border-zinc-800">
             <motion.div
               initial={{ opacity: 0, x: 20 }}
               animate={{ opacity: 1, x: 0 }}
@@ -120,16 +120,16 @@ export default function Contact() {
                 {/* Madurai Office */}
                 <div>
                   <div className="flex items-center gap-4 mb-4">
-                    <div className="w-10 h-10 bg-slate-800 rounded-lg flex items-center justify-center border border-white/10">
+                    <div className="w-10 h-10 bg-zinc-800 rounded-lg flex items-center justify-center border border-white/10">
                       <MapPin className="w-5 h-5 text-emerald-500" />
                     </div>
                     <h3 className="text-2xl font-bold tracking-tight">Madurai HQ</h3>
                   </div>
-                  <p className="text-slate-400 mb-6 leading-relaxed font-medium pl-14">
-                    No.5, North St, Singarayar Colony,<br />
+                  <p className="text-zinc-400 mb-6 leading-relaxed font-medium pl-14">
+                    No.5, North Street, Singarayar Colony,<br />
                     Narimedu, Madurai – 625002
                   </p>
-                  <div className="flex items-center gap-3 text-slate-300 pl-14 font-medium">
+                  <div className="flex items-center gap-3 text-zinc-300 pl-14 font-medium">
                     <Phone className="w-4 h-4 text-emerald-500" />
                     <span>0452 4506226</span>
                   </div>
@@ -138,16 +138,16 @@ export default function Contact() {
                 {/* Chennai Office */}
                 <div>
                   <div className="flex items-center gap-4 mb-4">
-                    <div className="w-10 h-10 bg-slate-800 rounded-lg flex items-center justify-center border border-white/10">
+                    <div className="w-10 h-10 bg-zinc-800 rounded-lg flex items-center justify-center border border-white/10">
                       <MapPin className="w-5 h-5 text-emerald-500" />
                     </div>
                     <h3 className="text-2xl font-bold tracking-tight">Chennai Branch</h3>
                   </div>
-                  <p className="text-slate-400 mb-6 leading-relaxed font-medium pl-14">
-                    K.R.J Building, 4th Floor,<br />
-                    7, Welder St, Mount Road, Chennai
+                  <p className="text-zinc-400 mb-6 leading-relaxed font-medium pl-14">
+                    K.R.J. Building, 4th Floor,<br />
+                    7, Welder Street, Mount Road, Chennai
                   </p>
-                  <div className="flex items-center gap-3 text-slate-300 pl-14 font-medium">
+                  <div className="flex items-center gap-3 text-zinc-300 pl-14 font-medium">
                     <Phone className="w-4 h-4 text-emerald-500" />
                     <span>044 42153870</span>
                   </div>
@@ -157,17 +157,11 @@ export default function Contact() {
 
                 {/* Digital Contact */}
                 <div className="space-y-6">
-                  <a href="mailto:truewavessolutions@yahoo.com" className="flex items-center gap-4 text-slate-300 hover:text-emerald-400 transition-colors group font-medium">
-                    <div className="w-10 h-10 bg-slate-800 rounded-lg flex items-center justify-center border border-white/10 group-hover:border-emerald-500 transition-colors">
+                  <a href="mailto:truewavessolutions@yahoo.com" className="flex items-center gap-4 text-zinc-300 hover:text-emerald-400 transition-colors group font-medium">
+                    <div className="w-10 h-10 bg-zinc-800 rounded-lg flex items-center justify-center border border-white/10 group-hover:border-emerald-500 transition-colors">
                       <Mail className="w-4 h-4 text-emerald-500" />
                     </div>
                     <span className="truncate">truewavessolutions@yahoo.com</span>
-                  </a>
-                  <a href="http://www.truewavessecuritysolution.com" target="_blank" rel="noopener noreferrer" className="flex items-center gap-4 text-slate-300 hover:text-emerald-400 transition-colors group font-medium">
-                    <div className="w-10 h-10 bg-slate-800 rounded-lg flex items-center justify-center border border-white/10 group-hover:border-emerald-500 transition-colors">
-                      <Send className="w-4 h-4 text-emerald-500" />
-                    </div>
-                    <span className="truncate">truewavessecuritysolution.com</span>
                   </a>
                 </div>
 

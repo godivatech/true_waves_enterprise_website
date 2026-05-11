@@ -171,6 +171,44 @@ export default function Contact() {
 
         </div>
       </section>
+      {/* FAQ Section */}
+      <section className="bg-zinc-50 py-32 border-t border-zinc-200">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-16">
+            <div className="lg:col-span-4">
+              <h2 className="text-xs uppercase tracking-widest text-emerald-600 font-bold mb-6">Common Inquiries</h2>
+              <h3 className="text-4xl font-bold text-zinc-950 tracking-tighter">Frequently Asked Questions</h3>
+              <p className="text-zinc-600 mt-6 font-medium">Quick answers to standard operational questions regarding our security services.</p>
+            </div>
+            <div className="lg:col-span-8 space-y-12">
+              {[
+                { 
+                  q: "Are you licensed to operate statewide in Tamil Nadu?", 
+                  a: "Yes. True Waves Enterprises holds a valid police license (No. 910/2017) issued by the Tamil Nadu Police for operations across the entire state." 
+                },
+                { 
+                  q: "Do you provide 24/7 emergency support?", 
+                  a: "Absolutely. Our command centers in Madurai and Chennai operate round-the-clock to ensure immediate response and support for all deployed units." 
+                },
+                { 
+                  q: "Is your staff fully insured and compliant with statutory obligations?", 
+                  a: "Yes. We maintain 100% compliance with ESI, EPF, and GST regulations. All our personnel are fully insured and undergo rigorous police verification." 
+                }
+              ].map((faq, idx) => (
+                <div key={idx} className="border-b border-zinc-200 pb-10 last:border-0 last:pb-0">
+                  <h4 className="text-xl font-bold text-zinc-950 mb-4 flex gap-4">
+                    <span className="text-emerald-600 shrink-0">Q.</span>
+                    {faq.q}
+                  </h4>
+                  <p className="text-zinc-600 font-medium leading-relaxed pl-9">
+                    {faq.a}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
     </>
   );
 }

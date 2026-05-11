@@ -171,6 +171,51 @@ export default function Services() {
         </div>
       </section>
 
+      {/* Service Deployment Workflow Section */}
+      <section className="bg-white py-32 text-zinc-900 border-b border-zinc-200">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="mb-20">
+            <h2 className="text-xs uppercase tracking-widest text-emerald-600 font-bold mb-4">Operational Process</h2>
+            <h3 className="text-4xl md:text-5xl font-bold tracking-tighter text-zinc-950">How We Deploy Protection</h3>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+            {[
+              { 
+                step: "01", 
+                title: "Site Survey", 
+                desc: "A comprehensive physical assessment of your premises to identify vulnerabilities and security gaps." 
+              },
+              { 
+                step: "02", 
+                title: "Strategic Planning", 
+                desc: "Designing a custom layout integrating technical systems (CCTV) with trained personnel deployments." 
+              },
+              { 
+                step: "03", 
+                title: "Deployment", 
+                desc: "Onboarding of strictly vetted staff alongside technical installation and site-specific training." 
+              },
+              { 
+                step: "04", 
+                title: "Ongoing Audit", 
+                desc: "Regular performance reviews and strategic audits conducted by retired police professionals." 
+              }
+            ].map((item, idx) => (
+              <div key={idx} className="relative group">
+                <div className="text-5xl font-bold text-zinc-100 group-hover:text-emerald-50/50 transition-colors duration-500 absolute -top-8 -left-2 z-0">
+                  {item.step}
+                </div>
+                <div className="relative z-10 pt-4">
+                  <h4 className="text-xl font-bold text-zinc-950 mb-4 tracking-tight">{item.title}</h4>
+                  <p className="text-zinc-600 font-medium text-sm leading-relaxed">{item.desc}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* CTA Section (Dark) */}
       <section className="bg-zinc-950 py-32 md:py-48 relative overflow-hidden text-center flex flex-col items-center justify-center">
         <div className="absolute inset-0 bg-zinc-900/30"></div>

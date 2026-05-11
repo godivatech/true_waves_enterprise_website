@@ -99,6 +99,30 @@ export default function About() {
               ))}
             </div>
           </div>
+
+          {/* Core Values Section from Brochure */}
+          <div className="mt-32 pt-32 border-t border-zinc-200">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-16">
+              <div className="lg:col-span-4">
+                <h2 className="text-xs uppercase tracking-widest text-emerald-600 font-bold mb-6">Core Values</h2>
+                <h3 className="text-3xl font-bold text-zinc-950 tracking-tighter">The principles that guide our protection.</h3>
+              </div>
+              <div className="lg:col-span-8 grid grid-cols-1 sm:grid-cols-2 gap-x-12 gap-y-10">
+                {[
+                  { title: "Quality & Dependability", desc: "Providing quick, reliable, and consistent service across all sectors." },
+                  { title: "High Integrity", desc: "Duty-minded professionals operating with the highest ethical standards." },
+                  { title: "Cost-Effective Solutions", desc: "Premium security doesn't have to be overpriced. We deliver value." },
+                  { title: "Guaranteed Results", desc: "Measurable protection outcomes that ensure peace of mind." }
+                ].map((value, idx) => (
+                  <div key={idx} className="flex flex-col gap-3">
+                    <div className="w-8 h-1 bg-emerald-500 rounded-full"></div>
+                    <h4 className="text-xl font-bold text-zinc-950 tracking-tight">{value.title}</h4>
+                    <p className="text-zinc-600 font-medium leading-relaxed">{value.desc}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -177,7 +201,7 @@ export default function About() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
               { name: "V. Santhanam", role: "Managing Director", desc: "Additional Superintendent of Police (Rtd.)" },
-              { name: "M. Karthikeyan", role: "Director", desc: "Additional Superintendent of Police (Rtd.)" },
+              { name: "S. Kumaravel", role: "Director", desc: "Additional Superintendent of Police (Rtd.)" },
               { name: "Er. S. Sanjay", role: "Director", desc: "Marketing & Infrastructure" }
             ].map((leader, idx) => (
               <motion.div

@@ -135,58 +135,51 @@ export default function About() {
       {/* The Discipline Standard (Training & Vetting) */}
       <section className="bg-zinc-100 py-32 border-t border-zinc-200">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="mb-20 text-center flex flex-col items-center">
-            <h2 className="text-xs uppercase tracking-widest text-emerald-600 font-bold mb-4">Selection & Training</h2>
-            <h3 className="text-4xl md:text-5xl font-bold tracking-tighter text-zinc-950 max-w-2xl">
-              The Discipline Standard
-            </h3>
-            <p className="text-zinc-600 mt-6 max-w-3xl text-lg font-medium leading-relaxed">
+          <div className="mb-20 flex flex-col md:flex-row justify-between items-start md:items-end gap-8">
+            <div className="max-w-2xl">
+              <h2 className="text-xs uppercase tracking-widest text-emerald-600 font-bold mb-6 flex items-center gap-4">
+                Selection & Training
+                <div className="h-px bg-emerald-600/20 flex-1 md:hidden"></div>
+              </h2>
+              <h3 className="text-4xl md:text-5xl font-semibold tracking-tight text-zinc-950 leading-[1.1]">
+                The Discipline Standard
+              </h3>
+            </div>
+            <p className="text-zinc-500 max-w-xl text-lg font-medium leading-relaxed border-l-2 border-emerald-500/30 pl-6">
               Because our leadership comes from a police background, we enforce an unparalleled standard of vetting and continuous training. We don't just hire guards; we deploy professionals.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8, ease, delay: 0.1 }}
-              className="bg-white p-10 rounded-xl border border-zinc-200 shadow-sm"
-            >
-              <div className="text-emerald-600 font-bold text-xl mb-4">01</div>
-              <h4 className="font-bold text-2xl text-zinc-950 mb-4 tracking-tight">Rigorous Vetting</h4>
-              <p className="text-zinc-600 font-medium leading-relaxed">
-                Every candidate undergoes strict police verification, background checks, and psychological evaluation before onboarding.
-              </p>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8, ease, delay: 0.2 }}
-              className="bg-white p-10 rounded-xl border border-zinc-200 shadow-sm"
-            >
-              <div className="text-emerald-600 font-bold text-xl mb-4">02</div>
-              <h4 className="font-bold text-2xl text-zinc-950 mb-4 tracking-tight">Physical Standards</h4>
-              <p className="text-zinc-600 font-medium leading-relaxed">
-                Mandatory physical fitness benchmarks matched to law enforcement entry requirements, ensuring capability under pressure.
-              </p>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8, ease, delay: 0.3 }}
-              className="bg-white p-10 rounded-xl border border-zinc-200 shadow-sm"
-            >
-              <div className="text-emerald-600 font-bold text-xl mb-4">03</div>
-              <h4 className="font-bold text-2xl text-zinc-950 mb-4 tracking-tight">Continuous Training</h4>
-              <p className="text-zinc-600 font-medium leading-relaxed">
-                Monthly refresher courses on emergency response, fire safety protocols, first aid, and customer interaction.
-              </p>
-            </motion.div>
+            {[
+              { num: "01", title: "Rigorous Vetting", desc: "Every candidate undergoes strict police verification, background checks, and psychological evaluation before onboarding." },
+              { num: "02", title: "Physical Standards", desc: "Mandatory physical fitness benchmarks matched to law enforcement entry requirements, ensuring capability under pressure." },
+              { num: "03", title: "Continuous Training", desc: "Monthly refresher courses on emergency response, fire safety protocols, first aid, and customer interaction." }
+            ].map((card, idx) => (
+              <motion.div
+                key={idx}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8, ease, delay: (idx + 1) * 0.1 }}
+                className="group relative bg-white p-10 rounded-2xl border border-zinc-200 shadow-sm hover:shadow-xl hover:border-emerald-500/30 transition-all duration-500 overflow-hidden"
+              >
+                {/* Large Background Number */}
+                <div className="absolute -right-4 -top-8 text-[120px] font-bold text-zinc-50 group-hover:text-emerald-50 transition-colors duration-500 select-none z-0">
+                  {card.num}
+                </div>
+                
+                <div className="relative z-10">
+                  <div className="w-12 h-12 rounded-full bg-emerald-100 flex items-center justify-center mb-8 group-hover:scale-110 transition-transform duration-500">
+                    <span className="text-emerald-600 font-bold">{card.num}</span>
+                  </div>
+                  <h4 className="font-bold text-2xl text-zinc-950 mb-4 tracking-tight group-hover:text-emerald-600 transition-colors duration-300">{card.title}</h4>
+                  <p className="text-zinc-500 font-medium leading-relaxed">
+                    {card.desc}
+                  </p>
+                </div>
+              </motion.div>
+            ))}
           </div>
         </div>
       </section>

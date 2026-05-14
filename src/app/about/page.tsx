@@ -38,22 +38,28 @@ export default function About() {
       {/* Vision & Mission (Light) */}
       <section className="bg-white py-32 text-zinc-900 border-b border-zinc-200">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 mb-32">
-            <div className="lg:col-span-6">
-              <h2 className="text-xs uppercase tracking-widest text-emerald-600 font-bold mb-6">Vision</h2>
-              <h3 className="text-3xl md:text-4xl font-bold mb-6 text-zinc-950 tracking-tighter leading-tight">
-                To be recognized as Tamil Nadu’s most trusted provider of Security and Investigation Services.
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-24 mb-32">
+            <div className="flex flex-col">
+              <h2 className="text-xs uppercase tracking-widest text-emerald-600 font-bold mb-6 flex items-center gap-4">
+                Vision
+                <div className="h-px bg-emerald-600/20 flex-1"></div>
+              </h2>
+              <h3 className="text-3xl md:text-4xl font-semibold mb-8 text-zinc-950 tracking-tight leading-[1.2] text-balance">
+                To be recognized as Tamil Nadu’s most trusted provider of <span className="text-emerald-600">Security and Investigation Services.</span>
               </h3>
-              <p className="text-zinc-600 text-lg leading-relaxed font-medium">
+              <p className="text-zinc-500 text-lg md:text-xl leading-relaxed font-medium border-l-2 border-emerald-500/30 pl-6">
                 Delivering protection with unmatched zeal, passion, and professionalism to every client we serve.
               </p>
             </div>
-            <div className="lg:col-span-6">
-              <h2 className="text-xs uppercase tracking-widest text-emerald-600 font-bold mb-6">Mission</h2>
-              <h3 className="text-3xl md:text-4xl font-bold mb-6 text-zinc-950 tracking-tighter leading-tight">
-                To deliver high-quality, innovative services built on trust and strong core values.
+            <div className="flex flex-col">
+              <h2 className="text-xs uppercase tracking-widest text-emerald-600 font-bold mb-6 flex items-center gap-4">
+                Mission
+                <div className="h-px bg-emerald-600/20 flex-1"></div>
+              </h2>
+              <h3 className="text-3xl md:text-4xl font-semibold mb-8 text-zinc-950 tracking-tight leading-[1.2] text-balance">
+                To deliver high-quality, innovative services built on <span className="text-emerald-600">trust and strong core values.</span>
               </h3>
-              <p className="text-zinc-600 text-lg leading-relaxed font-medium">
+              <p className="text-zinc-500 text-lg md:text-xl leading-relaxed font-medium border-l-2 border-emerald-500/30 pl-6">
                 Ensuring our clients feel truly secure and at peace through law-enforcement grade expertise and reliability.
               </p>
             </div>

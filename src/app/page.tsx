@@ -86,16 +86,29 @@ export default function Home() {
             </div>
 
             <div className="md:col-span-8 lg:col-span-8">
-              <div className="overflow-hidden mb-12">
-                <motion.h3
-                  initial={{ y: "100%" }}
-                  whileInView={{ y: 0 }}
-                  viewport={{ once: true, margin: "-100px" }}
-                  transition={{ duration: 1, ease }}
-                  className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tighter leading-[1.1] text-zinc-950"
-                >
-                  Professionally managed security solutions with unparalleled expertise in crime prevention, covert surveillance, and intelligence.
-                </motion.h3>
+              <div className="mb-12 max-w-4xl">
+                <div className="overflow-hidden">
+                  <motion.h3
+                    initial={{ y: "100%" }}
+                    whileInView={{ y: 0 }}
+                    viewport={{ once: true, margin: "-100px" }}
+                    transition={{ duration: 1, ease }}
+                    className="text-4xl md:text-5xl lg:text-6xl font-semibold text-zinc-950 tracking-tight leading-[1.1]"
+                  >
+                    Professionally managed <span className="text-emerald-600">security solutions</span>
+                  </motion.h3>
+                </div>
+                <div className="overflow-hidden mt-6">
+                  <motion.p
+                    initial={{ y: "100%" }}
+                    whileInView={{ y: 0 }}
+                    viewport={{ once: true, margin: "-100px" }}
+                    transition={{ duration: 1, delay: 0.1, ease }}
+                    className="text-xl md:text-2xl text-zinc-500 font-medium leading-relaxed max-w-3xl"
+                  >
+                    With unparalleled expertise in crime prevention, covert surveillance, and intelligence.
+                  </motion.p>
+                </div>
               </div>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 pt-12 border-t border-zinc-200">

@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 import { Shield, Search, Cctv, Users, ArrowRight } from "lucide-react";
 import Link from "next/link";
 
@@ -72,9 +73,14 @@ export default function Services() {
                 ))}
               </ul>
             </motion.div>
-            <div className="lg:col-span-6">
-              <div className="bg-zinc-100 rounded-3xl h-full min-h-[400px] border border-zinc-200 flex items-center justify-center p-12">
-                <Users className="w-32 h-32 text-zinc-300" />
+            <div className="lg:col-span-6 group">
+              <div className="bg-zinc-100 rounded-3xl h-full min-h-[400px] border border-zinc-200 relative overflow-hidden shadow-2xl shadow-emerald-500/10">
+                <Image 
+                  src="/images/services/Expert Security.png" 
+                  alt="Expert Security Services" 
+                  fill 
+                  className="object-cover group-hover:scale-105 transition-transform duration-700 ease-in-out" 
+                />
               </div>
             </div>
           </div>
@@ -85,10 +91,14 @@ export default function Services() {
       <section className="bg-zinc-900 py-32 text-white border-b border-white/10">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
-            <div className="lg:col-span-6 order-2 lg:order-1">
-              <div className="bg-zinc-800 rounded-3xl h-full min-h-[400px] border border-white/10 flex items-center justify-center p-12 relative overflow-hidden">
-                <div className="absolute inset-0 bg-[url('/grid.svg')] bg-center opacity-[0.05]"></div>
-                <Search className="w-32 h-32 text-zinc-700 relative z-10" />
+            <div className="lg:col-span-6 order-2 lg:order-1 group">
+              <div className="bg-zinc-800 rounded-3xl h-full min-h-[400px] border border-white/10 relative overflow-hidden shadow-2xl shadow-black/50">
+                <Image 
+                  src="/images/services/Investigation Services.png" 
+                  alt="Investigation Services" 
+                  fill 
+                  className="object-cover group-hover:scale-105 transition-transform duration-700 ease-in-out" 
+                />
               </div>
             </div>
             <motion.div
@@ -162,9 +172,14 @@ export default function Services() {
                 ))}
               </ul>
             </motion.div>
-            <div className="lg:col-span-6">
-              <div className="bg-white rounded-3xl h-full min-h-[400px] border border-zinc-200 flex items-center justify-center p-12 shadow-sm">
-                <Cctv className="w-32 h-32 text-zinc-200" />
+            <div className="lg:col-span-6 group">
+              <div className="bg-white rounded-3xl h-full min-h-[400px] border border-zinc-200 relative overflow-hidden shadow-2xl shadow-emerald-500/5">
+                <Image 
+                  src="/images/services/Technical Provisions.png" 
+                  alt="Technical Security Solutions" 
+                  fill 
+                  className="object-cover group-hover:scale-105 transition-transform duration-700 ease-in-out" 
+                />
               </div>
             </div>
           </div>

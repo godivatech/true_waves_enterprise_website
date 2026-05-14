@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { Shield, Mail, Phone, MapPin } from "lucide-react";
 
 export default function Footer() {
@@ -7,12 +8,13 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
         {/* Brand */}
         <div className="col-span-1 md:col-span-1 flex flex-col gap-4">
-          <Link href="/" className="flex items-center gap-2 text-white">
-            <Shield className="w-8 h-8 text-emerald-500" />
-            <div className="flex flex-col">
-              <span className="font-bold text-lg leading-tight tracking-tight">TRUE WAVES</span>
-              <span className="text-[10px] text-zinc-400 font-medium tracking-widest uppercase">Enterprises</span>
-            </div>
+          <Link href="/" className="flex items-center group relative w-48 h-12">
+            <Image 
+              src="/images/Logo.png" 
+              alt="True Waves Enterprises Logo" 
+              fill 
+              className="object-contain object-left"
+            />
           </Link>
           <p className="text-sm leading-relaxed mt-2">
             Professional Security and Investigation Services across Tamil Nadu. Commanded by police-background professionals.

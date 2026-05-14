@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 import { Shield, Award, Users, CheckCircle2 } from "lucide-react";
 
 const ease = [0.76, 0, 0.24, 1] as const;
@@ -199,9 +200,9 @@ export default function About() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
-              { name: "V. Santhanam", role: "Managing Director", desc: "Additional Superintendent of Police (Rtd.)" },
-              { name: "S. Kumaravel", role: "Director", desc: "Additional Superintendent of Police (Rtd.)" },
-              { name: "Er. S. Sanjay", role: "Director", desc: "Marketing & Infrastructure" }
+              { name: "V. Santhanam", role: "Managing Director", desc: "Additional Superintendent of Police (Rtd.)", image: "/images/team/santhanam.png" },
+              { name: "S. Kumaravel", role: "Director", desc: "Additional Superintendent of Police (Rtd.)", image: null },
+              { name: "Er. S. Sanjay", role: "Director", desc: "Marketing & Infrastructure", image: "/images/team/sanjay.png" }
             ].map((leader, idx) => (
               <motion.div
                 key={idx}
@@ -209,14 +210,28 @@ export default function About() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.8, ease, delay: idx * 0.1 }}
-                className="bg-zinc-900 p-8 rounded-xl border border-white/10 hover:border-emerald-500/50 transition-colors"
+                className="group bg-zinc-900 p-4 rounded-2xl border border-white/10 hover:border-emerald-500/30 transition-colors flex flex-col"
               >
-                <div className="w-16 h-16 bg-zinc-800 rounded-full mb-8 flex items-center justify-center border border-white/5">
-                  <Users className="w-6 h-6 text-emerald-500" />
+                {leader.image ? (
+                  <div className="w-full aspect-[4/5] rounded-xl mb-6 relative overflow-hidden bg-zinc-800">
+                    <Image 
+                      src={leader.image} 
+                      alt={leader.name} 
+                      fill 
+                      className="object-cover group-hover:scale-105 transition-transform duration-700 ease-in-out object-top" 
+                    />
+                  </div>
+                ) : (
+                  <div className="w-full aspect-[4/5] bg-zinc-800 rounded-xl mb-6 flex flex-col items-center justify-center border border-white/5">
+                    <Users className="w-12 h-12 text-zinc-700 mb-4" />
+                    <span className="text-zinc-600 text-xs font-bold tracking-widest uppercase">Photo Unavailable</span>
+                  </div>
+                )}
+                <div className="px-4 pb-4">
+                  <h4 className="text-2xl font-bold text-white mb-1 tracking-tight group-hover:text-emerald-400 transition-colors duration-300">{leader.name}</h4>
+                  <p className="text-emerald-500 font-bold text-xs uppercase tracking-widest mb-4">{leader.role}</p>
+                  <p className="text-zinc-400 text-sm font-medium leading-relaxed">{leader.desc}</p>
                 </div>
-                <h4 className="text-2xl font-bold text-white mb-2 tracking-tight">{leader.name}</h4>
-                <p className="text-emerald-500 font-bold text-sm uppercase tracking-widest mb-4">{leader.role}</p>
-                <p className="text-zinc-400 text-sm font-medium">{leader.desc}</p>
               </motion.div>
             ))}
           </div>

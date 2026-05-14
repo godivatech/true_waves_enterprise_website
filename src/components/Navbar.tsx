@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { Shield, Menu, X } from "lucide-react";
 import { useState } from "react";
@@ -21,12 +22,14 @@ export default function Navbar() {
     <nav className="sticky top-0 z-50 w-full bg-zinc-950/80 backdrop-blur-md border-b border-white/10">
       <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
         {/* Logo */}
-        <Link href="/" className="flex items-center gap-2 text-white group">
-          <Shield className="w-8 h-8 text-emerald-500 group-hover:text-emerald-400 transition-colors" />
-          <div className="flex flex-col">
-            <span className="font-bold text-lg leading-tight tracking-tight">TRUE WAVES</span>
-            <span className="text-[10px] text-zinc-400 font-medium tracking-widest uppercase">Enterprises</span>
-          </div>
+        <Link href="/" className="flex items-center group relative w-40 h-10 md:w-48 md:h-12">
+          <Image 
+            src="/images/Logo.png" 
+            alt="True Waves Enterprises Logo" 
+            fill 
+            className="object-contain"
+            priority
+          />
         </Link>
 
         {/* Desktop Nav */}

@@ -111,7 +111,7 @@ export default function About() {
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-16">
               <div className="lg:col-span-4">
                 <h2 className="text-xs uppercase tracking-widest text-emerald-600 font-bold mb-6">Core Values</h2>
-                <h3 className="text-3xl font-bold text-zinc-950 tracking-tighter">The principles that guide our protection.</h3>
+                <h3 className="text-3xl font-bold text-zinc-950 tracking-tighter">The principles that guide our protection</h3>
               </div>
               <div className="lg:col-span-8 grid grid-cols-1 sm:grid-cols-2 gap-x-12 gap-y-10">
                 {[

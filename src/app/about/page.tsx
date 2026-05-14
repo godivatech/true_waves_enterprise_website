@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { Shield, Award, Users, CheckCircle2 } from "lucide-react";
+import { section } from "framer-motion/client";
 
 const ease = [0.76, 0, 0.24, 1] as const;
 
@@ -227,6 +228,11 @@ export default function About() {
                     <span className="text-zinc-600 text-xs font-bold tracking-widest uppercase">Photo Unavailable</span>
                   </div>
                 )}
+                <section>
+                  <div>
+
+                  </div>
+                </section>
                 <div className="px-4 pb-4">
                   <h4 className="text-2xl font-bold text-white mb-1 tracking-tight group-hover:text-emerald-400 transition-colors duration-300">{leader.name}</h4>
                   <p className="text-emerald-500 font-bold text-xs uppercase tracking-widest mb-4">{leader.role}</p>

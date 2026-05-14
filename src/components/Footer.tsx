@@ -8,7 +8,7 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
         {/* Brand */}
         <div className="col-span-1 md:col-span-1 flex flex-col gap-4">
-          <Link href="/" className="flex items-center group relative w-48 h-12">
+          <Link href="/" className="flex items-center group relative w-64 h-16 mb-2">
             <Image 
               src="/images/Logo.png" 
               alt="True Waves Enterprises Logo" 

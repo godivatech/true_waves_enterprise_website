@@ -169,7 +169,7 @@ export default function About() {
                 <div className="absolute -right-4 -top-8 text-[120px] font-bold text-zinc-50 group-hover:text-emerald-50 transition-colors duration-500 select-none z-0">
                   {card.num}
                 </div>
-                
+
                 <div className="relative z-10">
                   <div className="w-12 h-12 rounded-full bg-emerald-100 flex items-center justify-center mb-8 group-hover:scale-110 transition-transform duration-500">
                     <span className="text-emerald-600 font-bold">{card.num}</span>
@@ -214,11 +214,11 @@ export default function About() {
               >
                 {leader.image ? (
                   <div className="w-full aspect-[4/5] rounded-xl mb-6 relative overflow-hidden bg-zinc-800">
-                    <Image 
-                      src={leader.image} 
-                      alt={leader.name} 
-                      fill 
-                      className="object-cover group-hover:scale-105 transition-transform duration-700 ease-in-out object-top" 
+                    <Image
+                      src={leader.image}
+                      alt={leader.name}
+                      fill
+                      className="object-cover group-hover:scale-105 transition-transform duration-700 ease-in-out object-top"
                     />
                   </div>
                 ) : (

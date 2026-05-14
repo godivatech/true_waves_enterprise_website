@@ -22,12 +22,12 @@ export default function Navbar() {
     <nav className="sticky top-0 z-50 w-full bg-zinc-950/80 backdrop-blur-md border-b border-white/10">
       <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
         {/* Logo */}
-        <Link href="/" className="flex items-center group relative w-40 h-10 md:w-48 md:h-12">
+        <Link href="/" className="flex items-center group relative w-48 h-12 md:w-64 md:h-16">
           <Image 
             src="/images/Logo.png" 
             alt="True Waves Enterprises Logo" 
             fill 
-            className="object-contain"
+            className="object-contain object-left"
             priority
           />
         </Link>

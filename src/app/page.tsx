@@ -149,7 +149,7 @@ export default function Home() {
           <div className="mb-20 text-center flex flex-col items-center">
             <h2 className="text-xs uppercase tracking-widest text-emerald-600 font-bold mb-4">Industry Expertise</h2>
             <h3 className="text-4xl md:text-5xl font-bold tracking-tighter text-zinc-950 max-w-2xl">
-              Securing critical infrastructure across specialized verticals.
+              Securing critical infrastructure across specialized verticals
             </h3>
           </div>
 

@@ -201,7 +201,7 @@ export default function About() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
               { name: "V. Santhanam", role: "Managing Director", desc: "Additional Superintendent of Police (Rtd.)", image: "/images/team/santhanam.png" },
-              { name: "S. Kumaravel", role: "Director", desc: "Additional Superintendent of Police (Rtd.)", image: null },
+              { name: "S. Kumaravel", role: "Director", desc: "Additional Superintendent of Police (Rtd.)", image: "/images/team/Kumaravel.png" },
               { name: "Er. S. Sanjay", role: "Director", desc: "Marketing & Infrastructure", image: "/images/team/sanjay.png" }
             ].map((leader, idx) => (
               <motion.div

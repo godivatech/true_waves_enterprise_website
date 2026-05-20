@@ -20,7 +20,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="scroll-smooth">
+    <html lang="en" className="scroll-smooth" suppressHydrationWarning>
       <body className={`${inter.variable} font-sans antialiased bg-zinc-950 text-zinc-50 min-h-screen flex flex-col selection:bg-emerald-500/30 selection:text-emerald-200`}>
         <Navbar />
         <main className="flex-grow flex flex-col">

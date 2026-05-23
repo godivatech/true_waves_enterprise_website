@@ -8,13 +8,15 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
         {/* Brand */}
         <div className="col-span-1 md:col-span-1 flex flex-col gap-4">
-          <Link href="/" className="flex items-center group relative w-64 h-16 mb-2">
-            <Image 
-              src="/images/Logo.png" 
-              alt="True Waves Enterprises Logo" 
-              fill 
-              className="object-contain object-left"
-            />
+          <Link href="/" className="flex items-center justify-center group relative w-64 h-16 mb-2 bg-white rounded-md p-1.5 shadow-xs">
+            <div className="relative w-full h-full">
+              <Image 
+                src="/images/Logo.png" 
+                alt="True Waves Enterprises Logo" 
+                fill 
+                className="object-contain object-center"
+              />
+            </div>
           </Link>
           <p className="text-sm leading-relaxed mt-2">
             Professional Security and Investigation Services across Tamil Nadu. Commanded by police-background professionals.
@@ -67,6 +69,17 @@ export default function Footer() {
 
       <div className="max-w-7xl mx-auto px-6 pt-8 border-t border-white/10 flex flex-col md:flex-row items-center justify-between gap-4 text-xs">
         <p>© {new Date().getFullYear()} True Waves Enterprises. All rights reserved.</p>
+        <p>
+          Designed & Developed by{" "}
+          <Link 
+            href="https://godivatech.com" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className="font-bold text-white hover:text-emerald-400 transition-colors"
+          >
+            Godivatech
+          </Link>
+        </p>
         <p>ISO 9001:2008 Certified • TN Police License No. 910/2017</p>
       </div>
     </footer>

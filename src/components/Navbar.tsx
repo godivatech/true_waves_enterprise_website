@@ -19,7 +19,7 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="sticky top-0 z-50 w-full bg-zinc-950/80 backdrop-blur-md border-b border-white/10">
+    <nav className="sticky top-0 z-50 w-full bg-white/90 backdrop-blur-md border-b border-zinc-200/80 shadow-xs">
       <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
         {/* Logo */}
         <Link href="/" className="flex items-center group relative w-48 h-12 md:w-64 md:h-16">
@@ -39,8 +39,8 @@ export default function Navbar() {
               <Link
                 key={link.name}
                 href={link.href}
-                className={`text-sm font-medium transition-colors hover:text-emerald-400 ${
-                  pathname === link.href ? "text-emerald-500" : "text-zinc-300"
+                className={`text-sm font-medium transition-colors hover:text-emerald-600 ${
+                  pathname === link.href ? "text-emerald-600 font-semibold" : "text-zinc-600"
                 }`}
               >
                 {link.name}
@@ -57,7 +57,7 @@ export default function Navbar() {
 
         {/* Mobile Menu Toggle */}
         <button
-          className="md:hidden text-zinc-300 hover:text-white"
+          className="md:hidden text-zinc-600 hover:text-zinc-950"
           onClick={() => setIsOpen(!isOpen)}
           aria-label="Toggle menu"
         >
@@ -72,7 +72,7 @@ export default function Navbar() {
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -10 }}
-            className="md:hidden absolute top-20 left-0 w-full bg-zinc-950 border-b border-white/10 py-4 px-6 flex flex-col gap-4 shadow-xl"
+            className="md:hidden absolute top-20 left-0 w-full bg-white border-b border-zinc-200 py-4 px-6 flex flex-col gap-4 shadow-xl"
           >
             {navLinks.map((link) => (
               <Link
@@ -80,7 +80,7 @@ export default function Navbar() {
                 href={link.href}
                 onClick={() => setIsOpen(false)}
                 className={`text-base font-medium transition-colors ${
-                  pathname === link.href ? "text-emerald-500" : "text-zinc-300"
+                  pathname === link.href ? "text-emerald-600 font-semibold" : "text-zinc-600 hover:text-emerald-600"
                 }`}
               >
                 {link.name}

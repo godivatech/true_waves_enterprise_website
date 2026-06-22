@@ -10,8 +10,19 @@ export default function About() {
   return (
     <>
       {/* Hero Section (Dark) */}
-      <section className="bg-zinc-950 pt-40 pb-24 md:pt-56 md:pb-32 border-b border-white/10 relative">
-        <div className="absolute inset-0 bg-[url('/grid.svg')] bg-center [mask-image:linear-gradient(180deg,white,rgba(255,255,255,0))] opacity-[0.03]"></div>
+      <section className="relative bg-zinc-950 pt-40 pb-24 md:pt-56 md:pb-32 border-b border-white/10 overflow-hidden">
+        {/* Background Image with reduced visibility */}
+        <div className="absolute inset-0 z-0">
+          <div
+            className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-20"
+            style={{ backgroundImage: "url('/images/camera-wide.jpg')" }}
+          />
+          {/* Gradients to blend and ensure text readability */}
+          <div className="absolute inset-0 bg-gradient-to-b from-zinc-950/90 via-zinc-950/40 to-zinc-950"></div>
+          {/* Grid overlay for texture */}
+          <div className="absolute inset-0 bg-[url('/grid.svg')] bg-center [mask-image:linear-gradient(180deg,white,rgba(255,255,255,0))] opacity-[0.03]"></div>
+        </div>
+
         <div className="max-w-7xl mx-auto px-6 relative z-10">
           <div className="max-w-3xl border-l-2 border-emerald-500 pl-6 md:pl-10">
             <div className="overflow-hidden mb-6">
@@ -110,9 +121,20 @@ export default function About() {
           {/* Core Values Section from Brochure */}
           <div className="mt-32 pt-32 border-t border-zinc-200">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-16">
-              <div className="lg:col-span-4">
-                <h2 className="text-xs uppercase tracking-widest text-emerald-600 font-bold mb-6">Core Values</h2>
-                <h3 className="text-3xl font-bold text-zinc-950 tracking-tighter">The principles that guide our protection</h3>
+              <div className="lg:col-span-4 flex flex-col justify-between h-full min-h-[280px]">
+                <div>
+                  <h2 className="text-xs uppercase tracking-widest text-emerald-600 font-bold mb-6">Core Values</h2>
+                  <h3 className="text-3xl font-bold text-zinc-950 tracking-tighter mb-8">The principles that guide our protection</h3>
+                </div>
+                <div className="group rounded-2xl overflow-hidden aspect-[16/10] relative border border-zinc-200 shadow-md">
+                  <Image
+                    src="/images/camera-close.jpg"
+                    alt="Close shot of CCTV surveillance camera representing technical vigilance"
+                    fill
+                    sizes="(max-width: 1024px) 100vw, 30vw"
+                    className="object-cover group-hover:scale-105 transition-transform duration-700 ease-in-out"
+                  />
+                </div>
               </div>
               <div className="lg:col-span-8 grid grid-cols-1 sm:grid-cols-2 gap-x-12 gap-y-10">
                 {[

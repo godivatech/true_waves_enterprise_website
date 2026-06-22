@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowRight } from "lucide-react";
 
 // Professional, smooth easing
@@ -16,7 +17,7 @@ export default function Home() {
         <div className="absolute inset-0 z-0">
           <div
             className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-40"
-            style={{ backgroundImage: "url('/hero-bg.png')" }}
+            style={{ backgroundImage: "url('/images/camera-wide.jpg')" }}
           />
           {/* Gradients to blend and ensure text readability - Neutral Tones */}
           <div className="absolute inset-0 bg-gradient-to-b from-zinc-950/90 via-zinc-950/40 to-zinc-950"></div>
@@ -72,12 +73,61 @@ export default function Home() {
       {/* About Preview (Light - bg-white) */}
       <section className="bg-white py-32 border-t border-zinc-200">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="grid grid-cols-1 md:grid-cols-12 gap-16">
-            <div className="md:col-span-4 flex flex-col justify-between">
-              <h2 className="text-xs uppercase tracking-widest text-zinc-500 font-bold mb-8">The Enterprise</h2>
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
+            
+            {/* Left Column: Text & Stats */}
+            <div className="lg:col-span-7 flex flex-col justify-between">
+              <div>
+                <h2 className="text-xs uppercase tracking-widest text-zinc-500 font-bold mb-8">The Enterprise</h2>
+                
+                <div className="mb-8">
+                  <div className="overflow-hidden">
+                    <motion.h3
+                      initial={{ y: "100%" }}
+                      whileInView={{ y: 0 }}
+                      viewport={{ once: true, margin: "-100px" }}
+                      transition={{ duration: 1, ease }}
+                      className="text-4xl md:text-5xl lg:text-6xl font-semibold text-zinc-950 tracking-tight leading-[1.1]"
+                    >
+                      Professionally managed <span className="text-emerald-600">security solutions</span>
+                    </motion.h3>
+                  </div>
+                  <div className="overflow-hidden mt-6">
+                    <motion.p
+                      initial={{ y: "100%" }}
+                      whileInView={{ y: 0 }}
+                      viewport={{ once: true, margin: "-100px" }}
+                      transition={{ duration: 1, delay: 0.1, ease }}
+                      className="text-xl md:text-2xl text-zinc-500 font-medium leading-relaxed max-w-2xl"
+                    >
+                      With unparalleled expertise in crime prevention, covert surveillance, and intelligence. Managed by law-enforcement experts to ensure top-tier safety.
+                    </motion.p>
+                  </div>
+                </div>
 
-              {/* Primary CTA (High Contrast Green) */}
-              <Link href="/about" className="hidden md:inline-flex items-center gap-4 group w-fit">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 pt-12 border-t border-zinc-200 mb-12">
+                  <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.8, delay: 0.2 }}
+                  >
+                    <div className="text-5xl font-bold tracking-tighter text-emerald-600 mb-2">2009</div>
+                    <div className="text-xs uppercase tracking-widest font-bold text-zinc-500">Established</div>
+                  </motion.div>
+                  <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.8, delay: 0.3 }}
+                  >
+                    <div className="text-5xl font-bold tracking-tighter text-zinc-950 mb-2">ISO</div>
+                    <div className="text-xs uppercase tracking-widest font-bold text-zinc-500">9001:2008 Certified</div>
+                  </motion.div>
+                </div>
+              </div>
+
+              <Link href="/about" className="inline-flex items-center gap-4 group w-fit">
                 <div className="w-12 h-12 rounded-full bg-emerald-600 flex items-center justify-center text-white group-hover:bg-zinc-950 transition-colors duration-500 shadow-sm">
                   <ArrowRight className="w-5 h-5 -rotate-45 group-hover:rotate-0 transition-transform duration-500" />
                 </div>
@@ -85,60 +135,26 @@ export default function Home() {
               </Link>
             </div>
 
-            <div className="md:col-span-8 lg:col-span-8">
-              <div className="mb-12 max-w-4xl">
-                <div className="overflow-hidden">
-                  <motion.h3
-                    initial={{ y: "100%" }}
-                    whileInView={{ y: 0 }}
-                    viewport={{ once: true, margin: "-100px" }}
-                    transition={{ duration: 1, ease }}
-                    className="text-4xl md:text-5xl lg:text-6xl font-semibold text-zinc-950 tracking-tight leading-[1.1]"
-                  >
-                    Professionally managed <span className="text-emerald-600">security solutions</span>
-                  </motion.h3>
-                </div>
-                <div className="overflow-hidden mt-6">
-                  <motion.p
-                    initial={{ y: "100%" }}
-                    whileInView={{ y: 0 }}
-                    viewport={{ once: true, margin: "-100px" }}
-                    transition={{ duration: 1, delay: 0.1, ease }}
-                    className="text-xl md:text-2xl text-zinc-500 font-medium leading-relaxed max-w-3xl"
-                  >
-                    With unparalleled expertise in crime prevention, covert surveillance, and intelligence.
-                  </motion.p>
-                </div>
-              </div>
-
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 pt-12 border-t border-zinc-200">
-                <motion.div
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.8, delay: 0.2 }}
-                >
-                  <div className="text-5xl font-bold tracking-tighter text-emerald-600 mb-2">2009</div>
-                  <div className="text-xs uppercase tracking-widest font-bold text-zinc-500">Established</div>
-                </motion.div>
-                <motion.div
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.8, delay: 0.3 }}
-                >
-                  <div className="text-5xl font-bold tracking-tighter text-zinc-950 mb-2">ISO</div>
-                  <div className="text-xs uppercase tracking-widest font-bold text-zinc-500">9001:2008 Certified</div>
-                </motion.div>
-              </div>
-
-              <Link href="/about" className="md:hidden mt-12 inline-flex items-center gap-4 group w-fit">
-                <div className="w-12 h-12 rounded-full bg-emerald-600 flex items-center justify-center text-white group-hover:bg-zinc-950 transition-colors duration-500 shadow-sm">
-                  <ArrowRight className="w-5 h-5 -rotate-45 group-hover:rotate-0 transition-transform duration-500" />
-                </div>
-                <span className="text-sm uppercase tracking-widest font-bold text-zinc-900">Our Leadership</span>
-              </Link>
+            {/* Right Column: Premium Image Card */}
+            <div className="lg:col-span-5 group">
+              <motion.div
+                initial={{ opacity: 0, scale: 0.95 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 1, ease }}
+                className="bg-zinc-100 rounded-3xl overflow-hidden aspect-[4/5] relative border border-zinc-200 shadow-2xl shadow-emerald-500/5"
+              >
+                <Image
+                  src="/images/security-guard.jpg"
+                  alt="True Waves Uniformed Security Guard Officer looking at facility"
+                  fill
+                  sizes="(max-width: 1024px) 100vw, 40vw"
+                  className="object-cover group-hover:scale-105 transition-transform duration-700 ease-in-out"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-60 pointer-events-none"></div>
+              </motion.div>
             </div>
+
           </div>
         </div>
       </section>

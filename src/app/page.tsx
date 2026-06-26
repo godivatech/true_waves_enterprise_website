@@ -74,12 +74,12 @@ export default function Home() {
       <section className="bg-white py-32 border-t border-zinc-200">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
-            
+
             {/* Left Column: Text & Stats */}
             <div className="lg:col-span-7 flex flex-col justify-between">
               <div>
                 <h2 className="text-xs uppercase tracking-widest text-zinc-500 font-bold mb-8">The Enterprise</h2>
-                
+
                 <div className="mb-8">
                   <div className="overflow-hidden">
                     <motion.h3

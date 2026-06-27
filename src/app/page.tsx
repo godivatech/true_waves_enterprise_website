@@ -1,5 +1,6 @@
 "use client";
 
+import { useState } from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
@@ -9,6 +10,16 @@ import { ArrowRight, Landmark, Factory, Hospital, GraduationCap, Home as HomeIco
 const ease = [0.76, 0, 0.24, 1] as const;
 
 export default function Home() {
+  const [hoveredIdx, setHoveredIdx] = useState<number | null>(null);
+
+  const verticals = [
+    { icon: Landmark, title: "Banking & Finance", desc: "High-security protocols for financial institutions and transit." },
+    { icon: Building2, title: "Corporate IT Parks", desc: "Comprehensive tech-enabled security for modern corporate hubs." },
+    { icon: GraduationCap, title: "Educational Institutions", desc: "Safe learning environments with controlled access and monitoring." },
+    { icon: HomeIcon, title: "High-End Residential", desc: "Premium, unobtrusive protection for luxury residential complexes." },
+    { icon: Hospital, title: "Healthcare & Hospitals", desc: "Discreet and professional security for sensitive medical environments." },
+    { icon: Factory, title: "Industrial & Manufacturing", desc: "Scaleable protection for expansive industrial units and assets." }
+  ];
   return (
     <>
       {/* Hero Section (Dark - bg-zinc-950) */}
@@ -169,15 +180,9 @@ export default function Home() {
             </h3>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {[
-              { icon: Landmark, title: "Banking & Finance", desc: "High-security protocols for financial institutions and transit." },
-              { icon: Factory, title: "Industrial & Manufacturing", desc: "Scaleable protection for expansive industrial units and assets." },
-              { icon: Hospital, title: "Healthcare & Hospitals", desc: "Discreet and professional security for sensitive medical environments." },
-              { icon: GraduationCap, title: "Educational Institutions", desc: "Safe learning environments with controlled access and monitoring." },
-              { icon: HomeIcon, title: "High-End Residential", desc: "Premium, unobtrusive protection for luxury residential complexes." },
-              { icon: Building2, title: "Corporate IT Parks", desc: "Comprehensive tech-enabled security for modern corporate hubs." }
-            ].map((vertical, i) => {
+          {/* Mobile/Tablet Grid Layout (lg:hidden) */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 lg:hidden">
+            {verticals.map((vertical, i) => {
               const Icon = vertical.icon;
               return (
                 <motion.div
@@ -194,6 +199,182 @@ export default function Home() {
                   <h4 className="text-xl font-bold text-zinc-950 mb-3 tracking-tight">{vertical.title}</h4>
                   <p className="text-zinc-600 font-medium text-sm leading-relaxed">{vertical.desc}</p>
                 </motion.div>
+              );
+            })}
+          </div>
+
+          {/* Desktop Circular Diagram Layout (hidden lg:block) */}
+          <div className="hidden lg:block relative w-full max-w-[1000px] h-[660px] mx-auto mt-12 select-none">
+            <svg className="absolute inset-0 w-full h-full pointer-events-none z-0" viewBox="0 0 1000 660" fill="none">
+              {/* Central Circle Outline */}
+              <circle cx="500" cy="300" r="162" stroke="#E5E7EB" strokeWidth="1" />
+              <circle cx="500" cy="300" r="154" stroke="#E5E7EB" strokeWidth="1" strokeDasharray="4,4" />
+              
+              {/* Connection Lines */}
+              {/* 0. Top Hexagon to Banking & Finance */}
+              <path 
+                d="M 460 90 L 300 90" 
+                className="transition-all duration-300" 
+                stroke={hoveredIdx === 0 ? "#10B981" : "#E5E7EB"} 
+                strokeWidth={hoveredIdx === 0 ? "2" : "1"} 
+                strokeDasharray={hoveredIdx === 0 ? "0" : "3,3"} 
+              />
+              <circle cx="300" cy="90" r={hoveredIdx === 0 ? "4" : "3"} className="transition-all duration-300" fill={hoveredIdx === 0 ? "#10B981" : "#94A3B8"} />
+              
+              {/* 1. Top-Left Hexagon to Corporate IT Parks */}
+              <path 
+                d="M 278 195 L 250 195" 
+                className="transition-all duration-300" 
+                stroke={hoveredIdx === 1 ? "#10B981" : "#E5E7EB"} 
+                strokeWidth={hoveredIdx === 1 ? "2" : "1"} 
+                strokeDasharray={hoveredIdx === 1 ? "0" : "3,3"} 
+              />
+              <circle cx="250" cy="195" r={hoveredIdx === 1 ? "4" : "3"} className="transition-all duration-300" fill={hoveredIdx === 1 ? "#10B981" : "#94A3B8"} />
+              
+              {/* 2. Bottom-Left Hexagon to Educational Institutions */}
+              <path 
+                d="M 278 405 L 250 405" 
+                className="transition-all duration-300" 
+                stroke={hoveredIdx === 2 ? "#10B981" : "#E5E7EB"} 
+                strokeWidth={hoveredIdx === 2 ? "2" : "1"} 
+                strokeDasharray={hoveredIdx === 2 ? "0" : "3,3"} 
+              />
+              <circle cx="250" cy="405" r={hoveredIdx === 2 ? "4" : "3"} className="transition-all duration-300" fill={hoveredIdx === 2 ? "#10B981" : "#94A3B8"} />
+              
+              {/* 3. Bottom Hexagon to High-End Residential */}
+              <path 
+                d="M 500 550 L 500 570" 
+                className="transition-all duration-300" 
+                stroke={hoveredIdx === 3 ? "#10B981" : "#E5E7EB"} 
+                strokeWidth={hoveredIdx === 3 ? "2" : "1"} 
+                strokeDasharray={hoveredIdx === 3 ? "0" : "3,3"} 
+              />
+              <circle cx="500" cy="570" r={hoveredIdx === 3 ? "4" : "3"} className="transition-all duration-300" fill={hoveredIdx === 3 ? "#10B981" : "#94A3B8"} />
+              
+              {/* 4. Bottom-Right Hexagon to Healthcare & Hospitals */}
+              <path 
+                d="M 722 405 L 750 405" 
+                className="transition-all duration-300" 
+                stroke={hoveredIdx === 4 ? "#10B981" : "#E5E7EB"} 
+                strokeWidth={hoveredIdx === 4 ? "2" : "1"} 
+                strokeDasharray={hoveredIdx === 4 ? "0" : "3,3"} 
+              />
+              <circle cx="750" cy="405" r={hoveredIdx === 4 ? "4" : "3"} className="transition-all duration-300" fill={hoveredIdx === 4 ? "#10B981" : "#94A3B8"} />
+              
+              {/* 5. Top-Right Hexagon to Industrial & Manufacturing */}
+              <path 
+                d="M 722 195 L 750 195" 
+                className="transition-all duration-300" 
+                stroke={hoveredIdx === 5 ? "#10B981" : "#E5E7EB"} 
+                strokeWidth={hoveredIdx === 5 ? "2" : "1"} 
+                strokeDasharray={hoveredIdx === 5 ? "0" : "3,3"} 
+              />
+              <circle cx="750" cy="195" r={hoveredIdx === 5 ? "4" : "3"} className="transition-all duration-300" fill={hoveredIdx === 5 ? "#10B981" : "#94A3B8"} />
+            </svg>
+
+            {/* Central Circle */}
+            <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 -mt-[30px] w-[280px] h-[280px] rounded-full bg-white shadow-xl border border-zinc-200 flex flex-col items-center justify-center p-6 text-center z-10">
+              {/* Shield Watermark Icon in background */}
+              <div className="absolute inset-0 opacity-[0.03] flex items-center justify-center pointer-events-none">
+                <svg className="w-36 h-36" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                </svg>
+              </div>
+              <h3 className="text-xl md:text-2xl font-bold tracking-tight text-zinc-950 leading-snug relative z-20">
+                Securing critical <br />
+                <span className="text-emerald-600">infrastructure</span> <br />
+                across specialized verticals
+              </h3>
+            </div>
+
+            {/* Left Column Text Blocks */}
+            <div 
+              className={`absolute left-[40px] top-[55px] w-[240px] text-right transition-all duration-300 cursor-pointer ${hoveredIdx === 0 ? "scale-105" : "opacity-80"}`}
+              onMouseEnter={() => setHoveredIdx(0)}
+              onMouseLeave={() => setHoveredIdx(null)}
+            >
+              <h4 className={`text-lg font-bold transition-colors duration-300 ${hoveredIdx === 0 ? "text-emerald-600 font-extrabold" : "text-zinc-950"}`}>Banking & Finance</h4>
+              <p className="text-zinc-500 text-xs mt-1 leading-relaxed font-medium">High-security protocols for financial institutions and transit.</p>
+            </div>
+
+            <div 
+              className={`absolute left-[10px] top-[160px] w-[220px] text-right transition-all duration-300 cursor-pointer ${hoveredIdx === 1 ? "scale-105" : "opacity-80"}`}
+              onMouseEnter={() => setHoveredIdx(1)}
+              onMouseLeave={() => setHoveredIdx(null)}
+            >
+              <h4 className={`text-lg font-bold transition-colors duration-300 ${hoveredIdx === 1 ? "text-emerald-600 font-extrabold" : "text-zinc-950"}`}>Corporate IT Parks</h4>
+              <p className="text-zinc-500 text-xs mt-1 leading-relaxed font-medium">Comprehensive tech-enabled security for modern corporate hubs.</p>
+            </div>
+
+            <div 
+              className={`absolute left-[10px] top-[370px] w-[220px] text-right transition-all duration-300 cursor-pointer ${hoveredIdx === 2 ? "scale-105" : "opacity-80"}`}
+              onMouseEnter={() => setHoveredIdx(2)}
+              onMouseLeave={() => setHoveredIdx(null)}
+            >
+              <h4 className={`text-lg font-bold transition-colors duration-300 ${hoveredIdx === 2 ? "text-emerald-600 font-extrabold" : "text-zinc-950"}`}>Educational Institutions</h4>
+              <p className="text-zinc-500 text-xs mt-1 leading-relaxed font-medium">Safe learning environments with controlled access and monitoring.</p>
+            </div>
+
+            {/* Right Column Text Blocks */}
+            <div 
+              className={`absolute right-[10px] top-[160px] w-[220px] text-left transition-all duration-300 cursor-pointer ${hoveredIdx === 5 ? "scale-105" : "opacity-80"}`}
+              onMouseEnter={() => setHoveredIdx(5)}
+              onMouseLeave={() => setHoveredIdx(null)}
+            >
+              <h4 className={`text-lg font-bold transition-colors duration-300 ${hoveredIdx === 5 ? "text-emerald-600 font-extrabold" : "text-zinc-950"}`}>Industrial & Manufacturing</h4>
+              <p className="text-zinc-500 text-xs mt-1 leading-relaxed font-medium">Scaleable protection for expansive industrial units and assets.</p>
+            </div>
+
+            <div 
+              className={`absolute right-[10px] top-[370px] w-[220px] text-left transition-all duration-300 cursor-pointer ${hoveredIdx === 4 ? "scale-105" : "opacity-80"}`}
+              onMouseEnter={() => setHoveredIdx(4)}
+              onMouseLeave={() => setHoveredIdx(null)}
+            >
+              <h4 className={`text-lg font-bold transition-colors duration-300 ${hoveredIdx === 4 ? "text-emerald-600 font-extrabold" : "text-zinc-950"}`}>Healthcare & Hospitals</h4>
+              <p className="text-zinc-500 text-xs mt-1 leading-relaxed font-medium">Discreet and professional security for sensitive medical environments.</p>
+            </div>
+
+            {/* Bottom Text Block */}
+            <div 
+              className={`absolute left-1/2 -translate-x-1/2 top-[565px] w-[280px] text-center transition-all duration-300 cursor-pointer ${hoveredIdx === 3 ? "scale-105" : "opacity-80"}`}
+              onMouseEnter={() => setHoveredIdx(3)}
+              onMouseLeave={() => setHoveredIdx(null)}
+            >
+              <h4 className={`text-lg font-bold transition-colors duration-300 ${hoveredIdx === 3 ? "text-emerald-600 font-extrabold" : "text-zinc-950"}`}>High-End Residential</h4>
+              <p className="text-zinc-500 text-xs mt-1 leading-relaxed font-medium">Premium, unobtrusive protection for luxury residential complexes.</p>
+            </div>
+
+            {/* Hexagonal Interactive Nodes */}
+            {verticals.map((vertical, idx) => {
+              const Icon = vertical.icon;
+              const isActive = hoveredIdx === idx;
+              
+              // Coordinates offsets for hexagon centers relative to absolute center at (500, 300)
+              // top-1/2 is 330px, so offsets subtract/add accordingly to be centered around 300px
+              const positions = [
+                "-mt-[240px]",             // 0: Top (Banking & Finance)
+                "-ml-[182px] -mt-[135px]",  // 1: Top-Left (Corporate IT Parks)
+                "-ml-[182px] mt-[75px]",   // 2: Bottom-Left (Educational Institutions)
+                "mt-[180px]",              // 3: Bottom (High-End Residential)
+                "ml-[182px] mt-[75px]",    // 4: Bottom-Right (Healthcare & Hospitals)
+                "ml-[182px] -mt-[135px]"   // 5: Top-Right (Industrial & Manufacturing)
+              ];
+              
+              return (
+                <div
+                  key={idx}
+                  className={`absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[76px] h-[88px] flex items-center justify-center p-[2px] transition-all duration-300 z-20 cursor-pointer ${positions[idx]} ${isActive ? "bg-emerald-500 scale-110 shadow-lg" : "bg-zinc-200"}`}
+                  style={{ clipPath: "polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)" }}
+                  onMouseEnter={() => setHoveredIdx(idx)}
+                  onMouseLeave={() => setHoveredIdx(null)}
+                >
+                  <div 
+                    className={`w-full h-full flex items-center justify-center transition-all duration-300 ${isActive ? "bg-emerald-600 text-white" : "bg-white text-emerald-600"}`}
+                    style={{ clipPath: "polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)" }}
+                  >
+                    <Icon className={`w-7 h-7 transition-transform duration-300 ${isActive ? "scale-110" : ""}`} />
+                  </div>
+                </div>
               );
             })}
           </div>

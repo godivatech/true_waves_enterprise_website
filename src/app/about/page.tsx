@@ -171,11 +171,11 @@ export default function About() {
                   transition={{ duration: 0.6, delay: idx * 0.1 }}
                   className="bg-zinc-50 border border-zinc-200/60 rounded-2xl p-8 hover:bg-white hover:border-emerald-500/50 hover:shadow-xl transition-all duration-300 relative group overflow-hidden flex flex-col justify-between min-h-[160px]"
                 >
+                  {/* Large watermark icon */}
+                  <value.icon className="absolute -right-2 -bottom-2 w-28 h-28 text-zinc-200/40 group-hover:text-emerald-500/10 transition-colors duration-500 select-none pointer-events-none z-0" />
+                  
                   <div className="relative z-10 flex flex-col gap-4">
-                    <div className="flex justify-between items-center w-full">
-                      <div className="w-8 h-1 bg-emerald-500 rounded-full group-hover:w-16 transition-all duration-300"></div>
-                      <value.icon className="w-6 h-6 text-zinc-400 group-hover:text-emerald-600 transition-colors duration-300" />
-                    </div>
+                    <div className="w-8 h-1 bg-emerald-500 rounded-full group-hover:w-16 transition-all duration-300"></div>
                     <div className="flex flex-col gap-2">
                       <h4 className="text-xl font-bold text-zinc-950 tracking-tight group-hover:text-emerald-600 transition-colors duration-300">{value.title}</h4>
                       <p className="text-sm text-zinc-600 font-medium leading-relaxed">{value.desc}</p>

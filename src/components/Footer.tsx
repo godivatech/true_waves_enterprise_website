@@ -4,11 +4,11 @@ import { Shield, Mail, Phone, MapPin } from "lucide-react";
 
 export default function Footer() {
   return (
-    <footer className="bg-zinc-950 pt-16 pb-8 border-t border-white/10 text-zinc-400">
+    <footer className="bg-zinc-100 pt-16 pb-8 border-t border-zinc-200 text-zinc-600">
       <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
         {/* Brand */}
         <div className="col-span-1 md:col-span-1 flex flex-col gap-4">
-          <Link href="/" className="flex items-center justify-center group relative w-64 h-16 mb-2 bg-white rounded-md p-1.5 shadow-xs">
+          <Link href="/" className="flex items-center justify-center group relative w-64 h-16 mb-2 bg-white rounded-md p-1.5 shadow-xs border border-zinc-200">
             <div className="relative w-full h-full">
               <Image 
                 src="/images/Logo.png" 
@@ -18,48 +18,48 @@ export default function Footer() {
               />
             </div>
           </Link>
-          <p className="text-sm leading-relaxed mt-2">
+          <p className="text-sm leading-relaxed mt-2 text-zinc-500">
             Professional Security and Investigation Services across Tamil Nadu. Commanded by police-background professionals.
           </p>
         </div>
 
         {/* Quick Links */}
         <div>
-          <h4 className="text-white font-semibold mb-4">Quick Links</h4>
+          <h4 className="text-zinc-950 font-bold mb-4">Quick Links</h4>
           <ul className="flex flex-col gap-3 text-sm">
-            <li><Link href="/" className="hover:text-emerald-400 transition-colors">Home</Link></li>
-            <li><Link href="/about" className="hover:text-emerald-400 transition-colors">About Us</Link></li>
-            <li><Link href="/services" className="hover:text-emerald-400 transition-colors">Services</Link></li>
-            <li><Link href="/contact" className="hover:text-emerald-400 transition-colors">Contact</Link></li>
+            <li><Link href="/" className="hover:text-emerald-600 transition-colors">Home</Link></li>
+            <li><Link href="/about" className="hover:text-emerald-600 transition-colors">About Us</Link></li>
+            <li><Link href="/services" className="hover:text-emerald-600 transition-colors">Services</Link></li>
+            <li><Link href="/contact" className="hover:text-emerald-600 transition-colors">Contact</Link></li>
           </ul>
         </div>
 
         {/* Services */}
         <div>
-          <h4 className="text-white font-semibold mb-4">Services</h4>
+          <h4 className="text-zinc-950 font-bold mb-4">Services</h4>
           <ul className="flex flex-col gap-3 text-sm">
-            <li><Link href="/services" className="hover:text-emerald-400 transition-colors">Security Services</Link></li>
-            <li><Link href="/services" className="hover:text-emerald-400 transition-colors">Manpower Solutions</Link></li>
-            <li><Link href="/services" className="hover:text-emerald-400 transition-colors">Investigation</Link></li>
-            <li><Link href="/services" className="hover:text-emerald-400 transition-colors">Technical Solutions</Link></li>
+            <li><Link href="/services" className="hover:text-emerald-600 transition-colors">Security Services</Link></li>
+            <li><Link href="/services" className="hover:text-emerald-600 transition-colors">Manpower Solutions</Link></li>
+            <li><Link href="/services" className="hover:text-emerald-600 transition-colors">Investigation</Link></li>
+            <li><Link href="/services" className="hover:text-emerald-600 transition-colors">Technical Solutions</Link></li>
           </ul>
         </div>
 
         {/* Contact */}
         <div>
-          <h4 className="text-white font-semibold mb-4">Contact Info</h4>
+          <h4 className="text-zinc-950 font-bold mb-4">Contact Info</h4>
           <ul className="flex flex-col gap-4 text-sm">
             <li className="flex gap-3">
-              <MapPin className="w-5 h-5 text-emerald-500 shrink-0" />
+              <MapPin className="w-5 h-5 text-emerald-600 shrink-0" />
               <span>No.5, North Street, Singarayar Colony, Narimedu, Madurai – 625002</span>
             </li>
             <li className="flex gap-3 items-center">
-              <Phone className="w-5 h-5 text-emerald-500 shrink-0" />
+              <Phone className="w-5 h-5 text-emerald-600 shrink-0" />
               <span>0452 4506226 / 044 42153870</span>
             </li>
             <li className="flex gap-3 items-center">
-              <Mail className="w-5 h-5 text-emerald-500 shrink-0" />
-              <a href="mailto:truewavessolutions@yahoo.com" className="hover:text-emerald-400 transition-colors truncate">
+              <Mail className="w-5 h-5 text-emerald-600 shrink-0" />
+              <a href="mailto:truewavessolutions@yahoo.com" className="hover:text-emerald-600 transition-colors truncate">
                 truewavessolutions@yahoo.com
               </a>
             </li>
@@ -67,7 +67,7 @@ export default function Footer() {
         </div>
       </div>
 
-      <div className="max-w-7xl mx-auto px-6 pt-8 border-t border-white/10 flex flex-col md:flex-row items-center justify-between gap-4 text-sm">
+      <div className="max-w-7xl mx-auto px-6 pt-8 border-t border-zinc-200 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-zinc-500">
         <p>© {new Date().getFullYear()} True Waves Enterprises. All rights reserved.</p>
         <p>
           Designed & Developed by{" "}
@@ -75,7 +75,7 @@ export default function Footer() {
             href="https://godivatech.com" 
             target="_blank" 
             rel="noopener noreferrer" 
-            className="font-bold text-white hover:text-emerald-400 transition-colors"
+            className="font-bold text-zinc-900 hover:text-emerald-600 transition-colors"
           >
             Godivatech
           </Link>

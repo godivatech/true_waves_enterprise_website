@@ -39,13 +39,13 @@ export default function Home() {
         </div>
 
         <div className="max-w-7xl mx-auto px-6 w-full relative z-10">
-          <div className="flex flex-col gap-2 md:gap-4 w-full border-l-2 border-emerald-500 pl-6 md:pl-10 mb-16">
+          <div className="flex flex-col gap-2 md:gap-4 w-full border-l-2 border-emerald-500 mb-16">
             {["Security", "Safety", "Surveillance"].map((text, i) => (
-              <div key={text} className="overflow-hidden">
+              <div key={text} className="overflow-hidden pl-6 md:pl-10">
                 <motion.h1
-                  initial={{ y: "100%" }}
-                  animate={{ y: 0 }}
-                  transition={{ duration: 1, ease, delay: i * 0.1 }}
+                  initial={{ x: "-100%", opacity: 0 }}
+                  animate={{ x: 0, opacity: 1 }}
+                  transition={{ duration: 1.2, ease, delay: i * 0.15 }}
                   className="text-5xl md:text-[6.8vw] font-bold uppercase tracking-tighter leading-[0.85] text-white"
                 >
                   {text}

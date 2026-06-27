@@ -431,12 +431,12 @@ export default function Home() {
       </section>
 
       {/* CTA Section (Highlight - bg-zinc-900/50 over bg-zinc-950) */}
-      <section className="bg-zinc-950 py-32 md:py-48 relative overflow-hidden">
+      <section className="bg-zinc-950 py-20 md:py-28 relative overflow-hidden">
         <div className="absolute inset-0 bg-zinc-900/30"></div>
         <div className="max-w-7xl mx-auto px-6 relative z-10 flex flex-col items-center text-center">
-          <h2 className="text-xs uppercase tracking-widest text-emerald-500 font-bold mb-8">Secure Your Infrastructure</h2>
+          <h2 className="text-xs uppercase tracking-widest text-emerald-500 font-bold mb-4">Secure Your Infrastructure</h2>
 
-          <div className="overflow-hidden mb-12">
+          <div className="overflow-hidden mb-6">
             <motion.h3
               initial={{ y: "100%" }}
               whileInView={{ y: 0 }}
@@ -448,7 +448,7 @@ export default function Home() {
             </motion.h3>
           </div>
 
-          <p className="text-xl text-zinc-400 mb-12 max-w-2xl font-medium">
+          <p className="text-xl text-zinc-400 mb-8 max-w-2xl font-medium">
             Partner with True Waves for uncompromising protection and professional investigation services. Let our experts assess your vulnerabilities.
           </p>
 

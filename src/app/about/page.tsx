@@ -50,31 +50,40 @@ export default function About() {
       {/* Vision & Mission (Light) */}
       <section className="bg-white py-32 text-zinc-900 border-b border-zinc-200">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-24">
-            <div className="flex flex-col">
-              <h2 className="text-xs uppercase tracking-widest text-emerald-600 font-bold mb-6 flex items-center gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
+            <motion.div
+              whileHover={{ y: -6 }}
+              transition={{ duration: 0.4, ease }}
+              className="flex flex-col bg-zinc-50/60 p-10 rounded-2xl border border-zinc-200/80 hover:border-zinc-800 hover:bg-zinc-900 hover:shadow-xl hover:shadow-emerald-500/5 transition-all duration-500 group"
+            >
+              <h2 className="text-xs uppercase tracking-widest text-emerald-600 group-hover:text-emerald-400 font-bold mb-6 flex items-center gap-4 transition-colors duration-500">
                 Vision
-                <div className="h-px bg-emerald-600/20 flex-1"></div>
+                <div className="h-px bg-emerald-600/20 group-hover:bg-emerald-500/30 transition-colors duration-500 flex-1"></div>
               </h2>
-              <h3 className="text-3xl md:text-4xl font-semibold mb-8 text-zinc-950 tracking-tight leading-[1.2] text-balance">
-                To be recognized as Tamil Nadu’s most trusted provider of <span className="text-emerald-600">Security and Investigation Services.</span>
+              <h3 className="text-3xl md:text-4xl font-semibold mb-8 text-zinc-950 group-hover:text-white tracking-tight leading-[1.2] text-balance transition-colors duration-500">
+                To be recognized as Tamil Nadu’s most trusted provider of <span className="text-emerald-600 group-hover:text-emerald-400 transition-colors duration-500">Security and Investigation Services.</span>
               </h3>
-              <p className="text-zinc-500 text-lg md:text-xl leading-relaxed font-medium border-l-2 border-emerald-500/30 pl-6">
+              <p className="text-zinc-500 group-hover:text-zinc-300 text-lg md:text-xl leading-relaxed font-medium border-l-2 border-emerald-500/30 group-hover:border-emerald-500 pl-6 group-hover:pl-8 transition-all duration-500">
                 Delivering protection with unmatched zeal, passion, and professionalism to every client we serve.
               </p>
-            </div>
-            <div className="flex flex-col">
-              <h2 className="text-xs uppercase tracking-widest text-emerald-600 font-bold mb-6 flex items-center gap-4">
+            </motion.div>
+
+            <motion.div
+              whileHover={{ y: -6 }}
+              transition={{ duration: 0.4, ease }}
+              className="flex flex-col bg-zinc-50/60 p-10 rounded-2xl border border-zinc-200/80 hover:border-zinc-800 hover:bg-zinc-900 hover:shadow-xl hover:shadow-emerald-500/5 transition-all duration-500 group"
+            >
+              <h2 className="text-xs uppercase tracking-widest text-emerald-600 group-hover:text-emerald-400 font-bold mb-6 flex items-center gap-4 transition-colors duration-500">
                 Mission
-                <div className="h-px bg-emerald-600/20 flex-1"></div>
+                <div className="h-px bg-emerald-600/20 group-hover:bg-emerald-500/30 transition-colors duration-500 flex-1"></div>
               </h2>
-              <h3 className="text-3xl md:text-4xl font-semibold mb-8 text-zinc-950 tracking-tight leading-[1.2] text-balance">
-                To deliver high-quality, innovative services built on <span className="text-emerald-600">trust and strong core values.</span>
+              <h3 className="text-3xl md:text-4xl font-semibold mb-8 text-zinc-950 group-hover:text-white tracking-tight leading-[1.2] text-balance transition-colors duration-500">
+                To deliver high-quality, innovative services built on <span className="text-emerald-600 group-hover:text-emerald-400 transition-colors duration-500">trust and strong core values.</span>
               </h3>
-              <p className="text-zinc-500 text-lg md:text-xl leading-relaxed font-medium border-l-2 border-emerald-500/30 pl-6">
+              <p className="text-zinc-500 group-hover:text-zinc-300 text-lg md:text-xl leading-relaxed font-medium border-l-2 border-emerald-500/30 group-hover:border-emerald-500 pl-6 group-hover:pl-8 transition-all duration-500">
                 Ensuring our clients feel truly secure and at peace through law-enforcement grade expertise and reliability.
               </p>
-            </div>
+            </motion.div>
           </div>
         </div>
       </section>

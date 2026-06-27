@@ -175,8 +175,8 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-6">
           <div className="mb-20 text-center flex flex-col items-center">
             <h2 className="text-xs uppercase tracking-widest text-emerald-600 font-bold mb-4">Industry Expertise</h2>
-            <h3 className="text-4xl md:text-5xl font-bold tracking-tighter text-zinc-950 max-w-2xl">
-              Securing critical infrastructure across specialized verticals
+            <h3 className="text-4xl md:text-5xl font-bold tracking-tighter text-zinc-950 max-w-none md:whitespace-nowrap">
+              Securing Key Industries and Sectors
             </h3>
           </div>
 
@@ -280,10 +280,10 @@ export default function Home() {
                   <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
                 </svg>
               </div>
-              <h3 className="text-xl md:text-2xl font-bold tracking-tight text-zinc-950 leading-snug relative z-20">
-                Securing critical <br />
-                <span className="text-emerald-600">infrastructure</span> <br />
-                across specialized verticals
+              <h3 className="text-xl font-bold tracking-tight text-zinc-950 leading-snug relative z-20">
+                Securing Key <br />
+                <span className="text-emerald-600">Industries</span> <br />
+                and Sectors
               </h3>
             </div>
 

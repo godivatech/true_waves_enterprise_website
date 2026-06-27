@@ -46,7 +46,7 @@ export default function Home() {
                   initial={{ y: "100%" }}
                   animate={{ y: 0 }}
                   transition={{ duration: 1, ease, delay: i * 0.1 }}
-                  className="text-6xl md:text-[8vw] font-bold uppercase tracking-tighter leading-[0.85] text-white"
+                  className="text-5xl md:text-[6.8vw] font-bold uppercase tracking-tighter leading-[0.85] text-white"
                 >
                   {text}
                 </motion.h1>

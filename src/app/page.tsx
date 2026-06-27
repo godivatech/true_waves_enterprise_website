@@ -27,12 +27,12 @@ export default function Home() {
         {/* Background Image with reduced visibility */}
         <div className="absolute inset-0 z-0">
           <div
-            className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-40"
+            className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-55"
             style={{ backgroundImage: "url('/images/camera-wide.jpg')" }}
           />
           {/* Gradients to blend and ensure text readability - Neutral Tones */}
-          <div className="absolute inset-0 bg-gradient-to-b from-zinc-950/90 via-zinc-950/40 to-zinc-950"></div>
-          <div className="absolute inset-0 bg-gradient-to-r from-zinc-950 via-zinc-950/20 to-transparent"></div>
+          <div className="absolute inset-0 bg-gradient-to-b from-zinc-950/70 via-transparent to-zinc-950/85"></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-zinc-950/75 via-transparent to-transparent"></div>
 
           {/* Grid overlay for texture */}
           <div className="absolute inset-0 bg-[url('/grid.svg')] bg-center [mask-image:linear-gradient(180deg,white,rgba(255,255,255,0))] opacity-[0.05]"></div>

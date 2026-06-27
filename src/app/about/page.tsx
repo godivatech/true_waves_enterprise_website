@@ -50,7 +50,7 @@ export default function About() {
       {/* Vision & Mission (Light) */}
       <section className="bg-white py-32 text-zinc-900 border-b border-zinc-200">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-24 mb-32">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-24">
             <div className="flex flex-col">
               <h2 className="text-xs uppercase tracking-widest text-emerald-600 font-bold mb-6 flex items-center gap-4">
                 Vision
@@ -76,7 +76,12 @@ export default function About() {
               </p>
             </div>
           </div>
+        </div>
+      </section>
 
+      {/* The Evolution (Grey) */}
+      <section className="bg-zinc-50 py-32 text-zinc-900 border-b border-zinc-200">
+        <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-16">
             <div className="lg:col-span-6">
               <h2 className="text-xs uppercase tracking-widest text-emerald-600 font-bold mb-6">The Evolution</h2>
@@ -106,7 +111,7 @@ export default function About() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.8, ease, delay: idx * 0.1 }}
-                  className="bg-zinc-50 p-8 rounded-xl border border-zinc-200 hover:border-emerald-500 transition-colors"
+                  className="bg-white p-8 rounded-xl border border-zinc-200 hover:border-emerald-500 transition-colors"
                 >
                   <div className="w-12 h-12 rounded-full bg-emerald-100 flex items-center justify-center mb-6">
                     <item.icon className="w-6 h-6 text-emerald-600" />
@@ -117,39 +122,41 @@ export default function About() {
               ))}
             </div>
           </div>
+        </div>
+      </section>
 
-          {/* Core Values Section from Brochure */}
-          <div className="mt-32 pt-32 border-t border-zinc-200">
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-16">
-              <div className="lg:col-span-4 flex flex-col justify-between h-full min-h-[280px]">
-                <div>
-                  <h2 className="text-xs uppercase tracking-widest text-emerald-600 font-bold mb-6">Core Values</h2>
-                  <h3 className="text-3xl font-bold text-zinc-950 tracking-tighter mb-8">The principles that guide our protection</h3>
-                </div>
-                <div className="group rounded-2xl overflow-hidden aspect-[16/10] relative border border-zinc-200 shadow-md">
-                  <Image
-                    src="/images/camera-close.jpg"
-                    alt="Close shot of CCTV surveillance camera representing technical vigilance"
-                    fill
-                    sizes="(max-width: 1024px) 100vw, 30vw"
-                    className="object-cover group-hover:scale-105 transition-transform duration-700 ease-in-out"
-                  />
-                </div>
+      {/* Core Values Section from Brochure (Light) */}
+      <section className="bg-white py-32 text-zinc-900 border-b border-zinc-200">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-16">
+            <div className="lg:col-span-4 flex flex-col justify-between h-full min-h-[280px]">
+              <div>
+                <h2 className="text-xs uppercase tracking-widest text-emerald-600 font-bold mb-6">Core Values</h2>
+                <h3 className="text-3xl font-bold text-zinc-950 tracking-tighter mb-8">The principles that guide our protection</h3>
               </div>
-              <div className="lg:col-span-8 grid grid-cols-1 sm:grid-cols-2 gap-x-12 gap-y-10">
-                {[
-                  { title: "Quality & Dependability", desc: "Providing quick, reliable, and consistent service across all sectors." },
-                  { title: "High Integrity", desc: "Duty-minded professionals operating with the highest ethical standards." },
-                  { title: "Cost-Effective Solutions", desc: "Premium security doesn't have to be overpriced. We deliver value." },
-                  { title: "Guaranteed Results", desc: "Measurable protection outcomes that ensure peace of mind." }
-                ].map((value, idx) => (
-                  <div key={idx} className="flex flex-col gap-3">
-                    <div className="w-8 h-1 bg-emerald-500 rounded-full"></div>
-                    <h4 className="text-xl font-bold text-zinc-950 tracking-tight">{value.title}</h4>
-                    <p className="text-zinc-600 font-medium leading-relaxed">{value.desc}</p>
-                  </div>
-                ))}
+              <div className="group rounded-2xl overflow-hidden aspect-[16/10] relative border border-zinc-200 shadow-md">
+                <Image
+                  src="/images/camera-close.jpg"
+                  alt="Close shot of CCTV surveillance camera representing technical vigilance"
+                  fill
+                  sizes="(max-width: 1024px) 100vw, 30vw"
+                  className="object-cover group-hover:scale-105 transition-transform duration-700 ease-in-out"
+                />
               </div>
+            </div>
+            <div className="lg:col-span-8 grid grid-cols-1 sm:grid-cols-2 gap-x-12 gap-y-10">
+              {[
+                { title: "Quality & Dependability", desc: "Providing quick, reliable, and consistent service across all sectors." },
+                { title: "High Integrity", desc: "Duty-minded professionals operating with the highest ethical standards." },
+                { title: "Cost-Effective Solutions", desc: "Premium security doesn't have to be overpriced. We deliver value." },
+                { title: "Guaranteed Results", desc: "Measurable protection outcomes that ensure peace of mind." }
+              ].map((value, idx) => (
+                <div key={idx} className="flex flex-col gap-3">
+                  <div className="w-8 h-1 bg-emerald-500 rounded-full"></div>
+                  <h4 className="text-xl font-bold text-zinc-950 tracking-tight">{value.title}</h4>
+                  <p className="text-zinc-600 font-medium leading-relaxed">{value.desc}</p>
+                </div>
+              ))}
             </div>
           </div>
         </div>

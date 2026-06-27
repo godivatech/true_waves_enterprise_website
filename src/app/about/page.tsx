@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
-import { Shield, Award, Users, CheckCircle2 } from "lucide-react";
+import { Shield, Award, Users, CheckCircle2, ShieldCheck, Scale, Coins, Target } from "lucide-react";
 
 const ease = [0.76, 0, 0.24, 1] as const;
 
@@ -137,13 +137,13 @@ export default function About() {
       {/* Core Values Section from Brochure (Light) */}
       <section className="bg-white py-32 text-zinc-900 border-b border-zinc-200">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-16">
-            <div className="lg:col-span-4 flex flex-col justify-between h-full min-h-[280px]">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-stretch">
+            <div className="lg:col-span-4 flex flex-col h-full">
               <div>
-                <h2 className="text-xs uppercase tracking-widest text-emerald-600 font-bold mb-6">Core Values</h2>
-                <h3 className="text-3xl font-bold text-zinc-950 tracking-tighter mb-8">The principles that guide our protection</h3>
+                <h2 className="text-xs uppercase tracking-widest text-emerald-600 font-bold mb-3">Core Values</h2>
+                <h3 className="text-3xl font-extrabold text-zinc-950 tracking-tight leading-[1.15]">The principles that guide our protection</h3>
               </div>
-              <div className="group rounded-2xl overflow-hidden aspect-[16/10] relative border border-zinc-200 shadow-md">
+              <div className="group rounded-2xl overflow-hidden flex-1 min-h-[240px] relative border border-zinc-200 shadow-md mt-6">
                 <Image
                   src="/images/camera-close.jpg"
                   alt="Close shot of CCTV surveillance camera representing technical vigilance"
@@ -151,20 +151,37 @@ export default function About() {
                   sizes="(max-width: 1024px) 100vw, 30vw"
                   className="object-cover group-hover:scale-105 transition-transform duration-700 ease-in-out"
                 />
+                <div className="absolute inset-0 bg-gradient-to-t from-zinc-950/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-4">
+                  <span className="text-xs font-semibold text-white tracking-wider uppercase">Vigilance & Precision</span>
+                </div>
               </div>
             </div>
-            <div className="lg:col-span-8 grid grid-cols-1 sm:grid-cols-2 gap-x-12 gap-y-10">
+            <div className="lg:col-span-8 grid grid-cols-1 sm:grid-cols-2 gap-6">
               {[
-                { title: "Quality & Dependability", desc: "Providing quick, reliable, and consistent service across all sectors." },
-                { title: "High Integrity", desc: "Duty-minded professionals operating with the highest ethical standards." },
-                { title: "Cost-Effective Solutions", desc: "Premium security doesn't have to be overpriced. We deliver value." },
-                { title: "Guaranteed Results", desc: "Measurable protection outcomes that ensure peace of mind." }
+                { icon: ShieldCheck, title: "Quality & Dependability", desc: "Providing quick, reliable, and consistent service across all sectors." },
+                { icon: Scale, title: "High Integrity", desc: "Duty-minded professionals operating with the highest ethical standards." },
+                { icon: Coins, title: "Cost-Effective Solutions", desc: "Premium security doesn't have to be overpriced. We deliver value." },
+                { icon: Target, title: "Guaranteed Results", desc: "Measurable protection outcomes that ensure peace of mind." }
               ].map((value, idx) => (
-                <div key={idx} className="flex flex-col gap-3">
-                  <div className="w-8 h-1 bg-emerald-500 rounded-full"></div>
-                  <h4 className="text-xl font-bold text-zinc-950 tracking-tight">{value.title}</h4>
-                  <p className="text-zinc-600 font-medium leading-relaxed">{value.desc}</p>
-                </div>
+                <motion.div
+                  key={idx}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6, delay: idx * 0.1 }}
+                  className="bg-zinc-50 border border-zinc-200/60 rounded-2xl p-8 hover:bg-white hover:border-emerald-500/50 hover:shadow-xl transition-all duration-300 relative group overflow-hidden flex flex-col justify-between min-h-[160px]"
+                >
+                  <div className="relative z-10 flex flex-col gap-4">
+                    <div className="flex justify-between items-center w-full">
+                      <div className="w-8 h-1 bg-emerald-500 rounded-full group-hover:w-16 transition-all duration-300"></div>
+                      <value.icon className="w-6 h-6 text-zinc-400 group-hover:text-emerald-600 transition-colors duration-300" />
+                    </div>
+                    <div className="flex flex-col gap-2">
+                      <h4 className="text-xl font-bold text-zinc-950 tracking-tight group-hover:text-emerald-600 transition-colors duration-300">{value.title}</h4>
+                      <p className="text-sm text-zinc-600 font-medium leading-relaxed">{value.desc}</p>
+                    </div>
+                  </div>
+                </motion.div>
               ))}
             </div>
           </div>

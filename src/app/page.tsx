@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Landmark, Factory, Hospital, GraduationCap, Home as HomeIcon, Building2 } from "lucide-react";
 
 // Professional, smooth easing
 const ease = [0.76, 0, 0.24, 1] as const;
@@ -171,26 +171,31 @@ export default function Home() {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
-              { title: "Banking & Finance", desc: "High-security protocols for financial institutions and transit." },
-              { title: "Industrial & Manufacturing", desc: "Scaleable protection for expansive industrial units and assets." },
-              { title: "Healthcare & Hospitals", desc: "Discreet and professional security for sensitive medical environments." },
-              { title: "Educational Institutions", desc: "Safe learning environments with controlled access and monitoring." },
-              { title: "High-End Residential", desc: "Premium, unobtrusive protection for luxury residential complexes." },
-              { title: "Corporate IT Parks", desc: "Comprehensive tech-enabled security for modern corporate hubs." }
-            ].map((vertical, i) => (
-              <motion.div
-                key={vertical.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.8, ease, delay: i * 0.1 }}
-                className="bg-white p-8 border border-zinc-200 hover:border-emerald-500 transition-colors duration-300 rounded-xl group"
-              >
-                <div className="w-2 h-2 bg-zinc-300 group-hover:bg-emerald-500 rounded-full mb-6 transition-colors duration-300"></div>
-                <h4 className="text-xl font-bold text-zinc-950 mb-3 tracking-tight">{vertical.title}</h4>
-                <p className="text-zinc-600 font-medium text-sm leading-relaxed">{vertical.desc}</p>
-              </motion.div>
-            ))}
+              { icon: Landmark, title: "Banking & Finance", desc: "High-security protocols for financial institutions and transit." },
+              { icon: Factory, title: "Industrial & Manufacturing", desc: "Scaleable protection for expansive industrial units and assets." },
+              { icon: Hospital, title: "Healthcare & Hospitals", desc: "Discreet and professional security for sensitive medical environments." },
+              { icon: GraduationCap, title: "Educational Institutions", desc: "Safe learning environments with controlled access and monitoring." },
+              { icon: HomeIcon, title: "High-End Residential", desc: "Premium, unobtrusive protection for luxury residential complexes." },
+              { icon: Building2, title: "Corporate IT Parks", desc: "Comprehensive tech-enabled security for modern corporate hubs." }
+            ].map((vertical, i) => {
+              const Icon = vertical.icon;
+              return (
+                <motion.div
+                  key={vertical.title}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.8, ease, delay: i * 0.1 }}
+                  className="bg-white p-8 border border-zinc-200 hover:border-emerald-500 transition-colors duration-300 rounded-xl group"
+                >
+                  <div className="w-12 h-12 rounded-lg bg-emerald-50 border border-emerald-500/20 flex items-center justify-center mb-6 group-hover:bg-emerald-600 group-hover:border-emerald-600 transition-colors duration-300">
+                    <Icon className="w-6 h-6 text-emerald-600 group-hover:text-white transition-colors duration-300" />
+                  </div>
+                  <h4 className="text-xl font-bold text-zinc-950 mb-3 tracking-tight">{vertical.title}</h4>
+                  <p className="text-zinc-600 font-medium text-sm leading-relaxed">{vertical.desc}</p>
+                </motion.div>
+              );
+            })}
           </div>
         </div>
       </section>

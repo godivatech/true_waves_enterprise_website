@@ -45,7 +45,7 @@ export default function Home() {
                 <motion.h1
                   initial={{ x: "-100%", opacity: 0 }}
                   animate={{ x: 0, opacity: 1 }}
-                  transition={{ duration: 1.2, ease, delay: i * 0.15 }}
+                  transition={{ duration: 1.6, ease, delay: i * 0.25 }}
                   className="text-5xl md:text-[6.8vw] font-bold uppercase tracking-tighter leading-[0.85] text-white"
                 >
                   {text}

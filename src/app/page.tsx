@@ -204,76 +204,76 @@ export default function Home() {
           </div>
 
           {/* Desktop Circular Diagram Layout (hidden lg:block) */}
-          <div className="hidden lg:block relative w-full max-w-[1000px] h-[660px] mx-auto mt-12 select-none">
-            <svg className="absolute inset-0 w-full h-full pointer-events-none z-0" viewBox="0 0 1000 660" fill="none">
+          <div className="hidden lg:block relative w-full max-w-[1000px] h-[720px] mx-auto mt-12 select-none">
+            <svg className="absolute inset-0 w-full h-full pointer-events-none z-0" viewBox="0 0 1000 720" fill="none">
               {/* Central Circle Outline */}
-              <circle cx="500" cy="300" r="162" stroke="#E5E7EB" strokeWidth="1" />
-              <circle cx="500" cy="300" r="154" stroke="#E5E7EB" strokeWidth="1" strokeDasharray="4,4" />
+              <circle cx="500" cy="360" r="162" stroke="#E5E7EB" strokeWidth="1" />
+              <circle cx="500" cy="360" r="154" stroke="#E5E7EB" strokeWidth="1" strokeDasharray="4,4" />
               
               {/* Connection Lines */}
               {/* 0. Top Hexagon to Banking & Finance */}
               <path 
-                d="M 460 90 L 300 90" 
+                d="M 500 150 L 500 106 L 500 90" 
                 className="transition-all duration-300" 
                 stroke={hoveredIdx === 0 ? "#10B981" : "#E5E7EB"} 
                 strokeWidth={hoveredIdx === 0 ? "2" : "1"} 
                 strokeDasharray={hoveredIdx === 0 ? "0" : "3,3"} 
               />
-              <circle cx="300" cy="90" r={hoveredIdx === 0 ? "4" : "3"} className="transition-all duration-300" fill={hoveredIdx === 0 ? "#10B981" : "#94A3B8"} />
+              <circle cx="500" cy="90" r={hoveredIdx === 0 ? "4" : "3"} className="transition-all duration-300" fill={hoveredIdx === 0 ? "#10B981" : "#94A3B8"} />
               
               {/* 1. Top-Left Hexagon to Corporate IT Parks */}
               <path 
-                d="M 278 195 L 250 195" 
+                d="M 280 233 L 250 233" 
                 className="transition-all duration-300" 
                 stroke={hoveredIdx === 1 ? "#10B981" : "#E5E7EB"} 
                 strokeWidth={hoveredIdx === 1 ? "2" : "1"} 
                 strokeDasharray={hoveredIdx === 1 ? "0" : "3,3"} 
               />
-              <circle cx="250" cy="195" r={hoveredIdx === 1 ? "4" : "3"} className="transition-all duration-300" fill={hoveredIdx === 1 ? "#10B981" : "#94A3B8"} />
+              <circle cx="250" cy="233" r={hoveredIdx === 1 ? "4" : "3"} className="transition-all duration-300" fill={hoveredIdx === 1 ? "#10B981" : "#94A3B8"} />
               
               {/* 2. Bottom-Left Hexagon to Educational Institutions */}
               <path 
-                d="M 278 405 L 250 405" 
+                d="M 280 443 L 250 443" 
                 className="transition-all duration-300" 
                 stroke={hoveredIdx === 2 ? "#10B981" : "#E5E7EB"} 
                 strokeWidth={hoveredIdx === 2 ? "2" : "1"} 
                 strokeDasharray={hoveredIdx === 2 ? "0" : "3,3"} 
               />
-              <circle cx="250" cy="405" r={hoveredIdx === 2 ? "4" : "3"} className="transition-all duration-300" fill={hoveredIdx === 2 ? "#10B981" : "#94A3B8"} />
+              <circle cx="250" cy="443" r={hoveredIdx === 2 ? "4" : "3"} className="transition-all duration-300" fill={hoveredIdx === 2 ? "#10B981" : "#94A3B8"} />
               
               {/* 3. Bottom Hexagon to High-End Residential */}
               <path 
-                d="M 500 550 L 500 570" 
+                d="M 500 570 L 500 614 L 500 630" 
                 className="transition-all duration-300" 
                 stroke={hoveredIdx === 3 ? "#10B981" : "#E5E7EB"} 
                 strokeWidth={hoveredIdx === 3 ? "2" : "1"} 
                 strokeDasharray={hoveredIdx === 3 ? "0" : "3,3"} 
               />
-              <circle cx="500" cy="570" r={hoveredIdx === 3 ? "4" : "3"} className="transition-all duration-300" fill={hoveredIdx === 3 ? "#10B981" : "#94A3B8"} />
+              <circle cx="500" cy="630" r={hoveredIdx === 3 ? "4" : "3"} className="transition-all duration-300" fill={hoveredIdx === 3 ? "#10B981" : "#94A3B8"} />
               
               {/* 4. Bottom-Right Hexagon to Healthcare & Hospitals */}
               <path 
-                d="M 722 405 L 750 405" 
+                d="M 720 443 L 750 443" 
                 className="transition-all duration-300" 
                 stroke={hoveredIdx === 4 ? "#10B981" : "#E5E7EB"} 
                 strokeWidth={hoveredIdx === 4 ? "2" : "1"} 
                 strokeDasharray={hoveredIdx === 4 ? "0" : "3,3"} 
               />
-              <circle cx="750" cy="405" r={hoveredIdx === 4 ? "4" : "3"} className="transition-all duration-300" fill={hoveredIdx === 4 ? "#10B981" : "#94A3B8"} />
+              <circle cx="750" cy="443" r={hoveredIdx === 4 ? "4" : "3"} className="transition-all duration-300" fill={hoveredIdx === 4 ? "#10B981" : "#94A3B8"} />
               
               {/* 5. Top-Right Hexagon to Industrial & Manufacturing */}
               <path 
-                d="M 722 195 L 750 195" 
+                d="M 720 233 L 750 233" 
                 className="transition-all duration-300" 
                 stroke={hoveredIdx === 5 ? "#10B981" : "#E5E7EB"} 
                 strokeWidth={hoveredIdx === 5 ? "2" : "1"} 
                 strokeDasharray={hoveredIdx === 5 ? "0" : "3,3"} 
               />
-              <circle cx="750" cy="195" r={hoveredIdx === 5 ? "4" : "3"} className="transition-all duration-300" fill={hoveredIdx === 5 ? "#10B981" : "#94A3B8"} />
+              <circle cx="750" cy="233" r={hoveredIdx === 5 ? "4" : "3"} className="transition-all duration-300" fill={hoveredIdx === 5 ? "#10B981" : "#94A3B8"} />
             </svg>
 
             {/* Central Circle */}
-            <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 -mt-[30px] w-[280px] h-[280px] rounded-full bg-white shadow-xl border border-zinc-200 flex flex-col items-center justify-center p-6 text-center z-10">
+            <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[280px] h-[280px] rounded-full bg-white shadow-xl border border-zinc-200 flex flex-col items-center justify-center p-6 text-center z-10">
               {/* Shield Watermark Icon in background */}
               <div className="absolute inset-0 opacity-[0.03] flex items-center justify-center pointer-events-none">
                 <svg className="w-36 h-36" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
@@ -287,9 +287,9 @@ export default function Home() {
               </h3>
             </div>
 
-            {/* Left Column Text Blocks */}
+            {/* Top Text Block */}
             <div 
-              className={`absolute left-[40px] top-[55px] w-[240px] text-right transition-all duration-300 cursor-pointer ${hoveredIdx === 0 ? "scale-105" : "opacity-80"}`}
+              className={`absolute left-1/2 -translate-x-1/2 top-[15px] w-[280px] text-center transition-all duration-300 cursor-pointer ${hoveredIdx === 0 ? "scale-105" : "opacity-80"}`}
               onMouseEnter={() => setHoveredIdx(0)}
               onMouseLeave={() => setHoveredIdx(null)}
             >
@@ -297,8 +297,9 @@ export default function Home() {
               <p className="text-zinc-500 text-xs mt-1 leading-relaxed font-medium">High-security protocols for financial institutions and transit.</p>
             </div>
 
+            {/* Left Column Text Blocks */}
             <div 
-              className={`absolute left-[10px] top-[160px] w-[220px] text-right transition-all duration-300 cursor-pointer ${hoveredIdx === 1 ? "scale-105" : "opacity-80"}`}
+              className={`absolute left-[10px] top-[220px] w-[220px] text-right transition-all duration-300 cursor-pointer ${hoveredIdx === 1 ? "scale-105" : "opacity-80"}`}
               onMouseEnter={() => setHoveredIdx(1)}
               onMouseLeave={() => setHoveredIdx(null)}
             >
@@ -307,7 +308,7 @@ export default function Home() {
             </div>
 
             <div 
-              className={`absolute left-[10px] top-[370px] w-[220px] text-right transition-all duration-300 cursor-pointer ${hoveredIdx === 2 ? "scale-105" : "opacity-80"}`}
+              className={`absolute left-[10px] top-[430px] w-[220px] text-right transition-all duration-300 cursor-pointer ${hoveredIdx === 2 ? "scale-105" : "opacity-80"}`}
               onMouseEnter={() => setHoveredIdx(2)}
               onMouseLeave={() => setHoveredIdx(null)}
             >
@@ -317,7 +318,7 @@ export default function Home() {
 
             {/* Right Column Text Blocks */}
             <div 
-              className={`absolute right-[10px] top-[160px] w-[220px] text-left transition-all duration-300 cursor-pointer ${hoveredIdx === 5 ? "scale-105" : "opacity-80"}`}
+              className={`absolute right-[10px] top-[220px] w-[220px] text-left transition-all duration-300 cursor-pointer ${hoveredIdx === 5 ? "scale-105" : "opacity-80"}`}
               onMouseEnter={() => setHoveredIdx(5)}
               onMouseLeave={() => setHoveredIdx(null)}
             >
@@ -326,7 +327,7 @@ export default function Home() {
             </div>
 
             <div 
-              className={`absolute right-[10px] top-[370px] w-[220px] text-left transition-all duration-300 cursor-pointer ${hoveredIdx === 4 ? "scale-105" : "opacity-80"}`}
+              className={`absolute right-[10px] top-[430px] w-[220px] text-left transition-all duration-300 cursor-pointer ${hoveredIdx === 4 ? "scale-105" : "opacity-80"}`}
               onMouseEnter={() => setHoveredIdx(4)}
               onMouseLeave={() => setHoveredIdx(null)}
             >
@@ -336,7 +337,7 @@ export default function Home() {
 
             {/* Bottom Text Block */}
             <div 
-              className={`absolute left-1/2 -translate-x-1/2 top-[565px] w-[280px] text-center transition-all duration-300 cursor-pointer ${hoveredIdx === 3 ? "scale-105" : "opacity-80"}`}
+              className={`absolute left-1/2 -translate-x-1/2 top-[640px] w-[280px] text-center transition-all duration-300 cursor-pointer ${hoveredIdx === 3 ? "scale-105" : "opacity-80"}`}
               onMouseEnter={() => setHoveredIdx(3)}
               onMouseLeave={() => setHoveredIdx(null)}
             >
@@ -349,15 +350,14 @@ export default function Home() {
               const Icon = vertical.icon;
               const isActive = hoveredIdx === idx;
               
-              // Coordinates offsets for hexagon centers relative to absolute center at (500, 300)
-              // top-1/2 is 330px, so offsets subtract/add accordingly to be centered around 300px
+              // Coordinates offsets for hexagon centers relative to absolute center at (500, 360)
               const positions = [
-                "-mt-[240px]",             // 0: Top (Banking & Finance)
-                "-ml-[182px] -mt-[135px]",  // 1: Top-Left (Corporate IT Parks)
-                "-ml-[182px] mt-[75px]",   // 2: Bottom-Left (Educational Institutions)
-                "mt-[180px]",              // 3: Bottom (High-End Residential)
-                "ml-[182px] mt-[75px]",    // 4: Bottom-Right (Healthcare & Hospitals)
-                "ml-[182px] -mt-[135px]"   // 5: Top-Right (Industrial & Manufacturing)
+                "-mt-[210px]",             // 0: Top (Banking & Finance)
+                "-ml-[182px] -mt-[105px]",  // 1: Top-Left (Corporate IT Parks)
+                "-ml-[182px] mt-[105px]",   // 2: Bottom-Left (Educational Institutions)
+                "mt-[210px]",              // 3: Bottom (High-End Residential)
+                "ml-[182px] mt-[105px]",    // 4: Bottom-Right (Healthcare & Hospitals)
+                "ml-[182px] -mt-[105px]"   // 5: Top-Right (Industrial & Manufacturing)
               ];
               
               return (

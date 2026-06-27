@@ -442,9 +442,9 @@ export default function Home() {
               whileInView={{ y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 1, ease }}
-              className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tighter uppercase leading-[0.9] text-white"
+              className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tighter uppercase leading-[0.9] text-white"
             >
-              Initiate <br /> Deployment
+              Initiate Deployment
             </motion.h3>
           </div>
 
